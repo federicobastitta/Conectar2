@@ -1,0 +1,370 @@
+openapi: 3.0.3
+info:
+  title: Contrato Conectar <-> DiagnosticPACS (BORRADOR v3 - integracion por worklist)
+  version: 0.3.0-draft-worklist
+  description: >
+    Contrato compartido, escenario v3 (21-jul-2026): integracion POR WORKLIST.
+    Conectar es dueno de la agenda y publica al PACS los estudios a realizar
+    (si Conectar agenda una ergometria, al PACS le figura que hay que hacer una
+    ergometria). El informe se redacta y FIRMA EN EL PACS; Conectar lo consume
+    (webhook REPORT_SIGNED + descarga del PDF) y lo distribuye al medico y al
+    paciente. Quedan sin efecto los endpoints de escritura de informes de la v2
+    (POST report / report/sign). Los schemas de respuesta del PACS siguen
+    marcados x-pending-confirmation hasta que DiagnosticPACS los confirme y
+    termine su migracion DICOM a S3. Flags: PACS_WORKSPACE_ENABLED (Conectar) y
+    PACS_INTEGRATION_ENABLED (PACS), ambos apagados hasta el acuerdo final.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Parte A: API de integracion que expone DiagnosticPACS (solo backend a backend)
+# Auth: Bearer PACS_API_TOKEN. DICOMweb (QIDO-RS/WADO-RS/STOW-RS) autenticado,
+# nunca publico: se usa via sesion contextual o token de backend, no desde el navegador.
+# ─────────────────────────────────────────────────────────────────────────────
+paths:
+  /api/v1/integration/worklist:
+    post:
+      summary: Publicar/actualizar un item de worklist (upsert idempotente por order_id)
+      description: >
+        Conectar lo llama al agendar, recepcionar o reprogramar un turno/orden de
+        practica de imagenes. El PACS debe mostrarlo en su lista de trabajo
+        (paciente, practica, modalidad, fecha/hora, motivo). Reintentos con la
+        misma Idempotency-Key devuelven la respuesta original.
+      operationId: upsertWorklistItem
+      parameters:
+        - { name: Idempotency-Key, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WorklistItem'
+      responses:
+        '200':
+          description: Item creado o actualizado
+          content:
+            application/json:
+              schema:
+                x-pending-confirmation: true
+                type: object
+                properties:
+                  order_id: { type: integer }
+                  accession_number: { type: string }
+                  worklist_status: { type: string, enum: [scheduled, arrived, ready_to_report, cancelled] }
+                  updated_at: { type: string, format: date-time }
+        '409': { description: Intento de cambiar campos inmutables (order_id, accession_number, patient_id) o misma Idempotency-Key con body distinto }
+        '422': { description: Item invalido (falta reason_for_study u otro campo requerido) }
+
+  /api/v1/integration/worklist/{order_id}:
+    delete:
+      summary: Quitar el item de worklist (turno cancelado o paciente ausente)
+      operationId: deleteWorklistItem
+      parameters:
+        - { name: order_id, in: path, required: true, schema: { type: integer } }
+      responses:
+        '204': { description: Item quitado (idempotente; repetir devuelve 204) }
+        '409': { description: El estudio ya tiene imagenes recibidas; se marca cancelado pero no se borra }
+
+  /api/v1/integration/health:
+    get:
+      summary: Estado de la integracion (usado por el diagnostico de admin tecnico en Conectar)
+      operationId: integrationHealth
+      responses:
+        '200':
+          description: Servicio disponible
+          content:
+            application/json:
+              schema:
+                x-pending-confirmation: true
+                type: object
+                properties:
+                  status: { type: string, example: ok }
+                  version: { type: string }
+
+  /api/v1/integration/viewer-sessions:
+    post:
+      summary: Crear sesion contextual temporal del visor (un solo uso / alcance limitado)
+      operationId: createViewerSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ViewerSessionRequest'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ViewerSessionResponse'
+        '401': { description: Sin autenticacion }
+        '403': { description: Rol sin permiso para el estudio solicitado }
+        '404': { description: Estudio/orden desconocido }
+        '503': { description: PACS no disponible }
+
+  /api/v1/integration/upload-sessions:
+    post:
+      summary: Iniciar sesion de carga (archivos directo a PACS/S3; reanudable; checksum)
+      operationId: createUploadSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadSessionRequest'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadSessionResponse'
+        '409': { description: Carga duplicada detectada (mismo order_id + checksum) }
+
+  /api/v1/integration/orders/{order_id}/study:
+    get:
+      summary: Estudio asociado a una orden de Conectar
+      operationId: getStudyByOrder
+      parameters:
+        - { name: order_id, in: path, required: true, schema: { type: integer } }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Study'
+        '404': { description: La orden no tiene estudio en el PACS }
+
+  /api/v1/integration/studies/{study_uid}/status:
+    get:
+      summary: Estado de un estudio
+      operationId: getStudyStatus
+      parameters:
+        - { name: study_uid, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudyStatus'
+
+  # v3: el informe se redacta y firma EN EL PACS. Conectar solo lo lee.
+  # Quedan eliminados del contrato: POST .../report y POST .../report/sign.
+  /api/v1/integration/studies/{study_uid}/report:
+    get:
+      summary: Obtener informe del estudio (redactado y firmado en el PACS; solo lectura para Conectar)
+      operationId: getStudyReport
+      parameters:
+        - { name: study_uid, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Report'
+        '404': { description: El estudio aun no tiene informe }
+
+  /api/v1/integration/studies/{study_uid}/report/pdf:
+    get:
+      summary: Descargar el PDF del informe firmado (Conectar lo archiva y lo entrega al paciente)
+      operationId: getStudyReportPdf
+      parameters:
+        - { name: study_uid, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: PDF del informe firmado. Incluir header con SHA-256 del archivo para verificacion.
+          content:
+            application/pdf:
+              schema: { type: string, format: binary }
+        '404': { description: No hay informe firmado para el estudio }
+        '409': { description: El informe existe pero aun no esta firmado }
+
+  /api/v1/integration/webhooks/test:
+    post:
+      summary: Disparar un evento de prueba hacia el webhook de Conectar (verificacion de firma)
+      operationId: testWebhook
+      responses:
+        '202': { description: Evento de prueba encolado }
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Parte B: Webhook que expone Conectar (consumido por DiagnosticPACS)
+# Firmado: header X-Pacs-Signature = HMAC-SHA256(body, PACS_WEBHOOK_SECRET)
+# + timestamp X-Pacs-Timestamp (rechazo si desvio > 5 min). Idempotente por event_id.
+# Prohibido incluir URLs S3 permanentes en el payload.
+# ─────────────────────────────────────────────────────────────────────────────
+  /api/pacs/webhook/eventos:
+    post:
+      summary: Eventos del PACS hacia Conectar (firmado, idempotente, auditado, con reintentos)
+      operationId: pacsWebhookEvento
+      parameters:
+        - { name: X-Pacs-Signature, in: header, required: true, schema: { type: string } }
+        - { name: X-Pacs-Timestamp, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PacsEvent'
+      responses:
+        '200': { description: Procesado (o ya procesado - idempotente) }
+        '202': { description: Auditado sin orden asociada aun }
+        '401': { description: Firma invalida o timestamp vencido }
+
+components:
+  schemas:
+    WorklistItem:
+      type: object
+      description: >
+        Item de la lista de trabajo que Conectar publica al PACS al agendar una
+        practica de imagenes. Practicas incluidas (definicion 21-jul-2026):
+        Holter, Presurometria, Electrocardiograma, OCT, PAP (ginecologia),
+        Resonancia Magnetica, Ecografia, Rayos, Mamografia. Inmutables una vez
+        creados: order_id, accession_number, patient_id (cambiarlos => 409;
+        ante error de identidad se anula la orden y se emite una nueva).
+      required: [order_id, patient_id, accession_number, practice_id, practice_description, modality, scheduled_at, reason_for_study, worklist_status]
+      properties:
+        order_id: { type: integer }
+        patient_id: { type: integer, description: ID interno de Conectar (inmutable) }
+        accession_number: { type: string, pattern: '^[A-Z0-9-]{1,16}$', description: 'Secuencia propia de Conectar C{AA}-{12 digitos}, ej C26-000000000001; opaco e inmutable' }
+        patient_name: { type: string }
+        patient_document: { type: string, description: DNI }
+        patient_birthdate: { type: string, description: YYYY-MM-DD }
+        patient_sex: { type: string, nullable: true }
+        patient_phone: { type: string, nullable: true, description: Telefono de contacto del paciente (agregado 21-jul-2026; el PACS lo usa para precargar el contacto) }
+        practice_id: { type: integer }
+        practice_description: { type: string, example: Ergometria }
+        modality: { type: string, example: US, description: Codigo de modalidad DICOM sugerido; a confirmar con el PACS }
+        scheduled_at: { type: string, format: date-time, description: Fecha y hora del turno }
+        sede: { type: string, nullable: true }
+        requesting_physician: { type: string, nullable: true, description: Profesional solicitante }
+        reason_for_study: { type: string, description: Obligatorio }
+        diagnosis: { type: string, nullable: true }
+        technician_notes: { type: string, nullable: true }
+        worklist_status:
+          type: string
+          enum: [scheduled, arrived, ready_to_report, cancelled]
+          description: scheduled=turno agendado; arrived=paciente recepcionado; ready_to_report=practica realizada, falta informar; cancelled=cancelado/ausente
+
+    ContextoClinico:
+      type: object
+      description: Contexto que Conectar entrega al PACS junto con la orden (seccion 6 de la spec).
+      required: [order_id, patient_id, practice_id, modality, reason_for_study]
+      properties:
+        order_id: { type: integer }
+        patient_id: { type: integer, description: ID interno de Conectar }
+        accession_number: { type: string }
+        practice_id: { type: integer }
+        practice_description: { type: string }
+        modality: { type: string, example: CR }
+        reason_for_study: { type: string, description: Obligatorio; visible en visor y requerido antes de IA }
+        diagnosis: { type: string, nullable: true }
+        technician_notes: { type: string, nullable: true }
+
+    ViewerSessionRequest:
+      allOf:
+        - $ref: '#/components/schemas/ContextoClinico'
+        - type: object
+          required: [user_id, role, requested_permissions]
+          properties:
+            user_id: { type: integer }
+            role: { type: string, enum: [recepcionista, tecnico, medico, admin] }
+            study_instance_uid: { type: string, nullable: true }
+            requested_permissions:
+              type: array
+              items: { type: string, enum: [view, measure, annotate, compare, report] }
+
+    ViewerSessionResponse:
+      x-pending-confirmation: true
+      type: object
+      required: [session_id, viewer_url, expires_at, permitted_actions, audit_id]
+      properties:
+        session_id: { type: string }
+        viewer_url: { type: string, description: URL temporal de un solo uso, restringida al estudio; sin claves permanentes }
+        expires_at: { type: string, format: date-time, description: Pocos minutos }
+        permitted_actions:
+          type: array
+          items: { type: string }
+        study_instance_uid: { type: string, nullable: true }
+        audit_id: { type: string }
+
+    UploadSessionRequest:
+      allOf:
+        - $ref: '#/components/schemas/ContextoClinico'
+        - type: object
+          properties:
+            expected_files: { type: integer }
+            total_size_bytes: { type: integer }
+            checksum: { type: string, description: SHA-256 del contenido para dedup/verificacion }
+
+    UploadSessionResponse:
+      x-pending-confirmation: true
+      type: object
+      properties:
+        upload_id: { type: string }
+        upload_url: { type: string, description: URL prefirmada breve (S3 privado + KMS); reanudable }
+        expires_at: { type: string, format: date-time }
+        resumable: { type: boolean }
+
+    Study:
+      x-pending-confirmation: true
+      type: object
+      properties:
+        order_id: { type: integer }
+        patient_id: { type: integer }
+        accession_number: { type: string }
+        study_instance_uid: { type: string }
+        practice_id: { type: integer }
+        modality: { type: string }
+        status: { type: string }
+        reason_for_study: { type: string }
+        updated_at: { type: string, format: date-time }
+
+    StudyStatus:
+      x-pending-confirmation: true
+      type: object
+      properties:
+        study_instance_uid: { type: string }
+        status: { type: string, enum: [upload_started, received, incomplete, ready, error] }
+        series_count: { type: integer }
+        instances_count: { type: integer }
+        updated_at: { type: string, format: date-time }
+
+    Report:
+      x-pending-confirmation: true
+      type: object
+      description: Informe redactado y firmado EN EL PACS (v3). Conectar solo lo lee.
+      properties:
+        study_instance_uid: { type: string }
+        order_id: { type: integer, nullable: true }
+        accession_number: { type: string, nullable: true }
+        status: { type: string, enum: [draft, signed] }
+        version: { type: integer, description: Version del informe; una nueva firma genera version nueva }
+        body: { type: string }
+        conclusion: { type: string }
+        signed_by_name: { type: string, nullable: true, description: Medico firmante del PACS (nombre y matricula) }
+        signed_at: { type: string, format: date-time, nullable: true }
+        pdf_available: { type: boolean, description: Si el PDF firmado ya puede descargarse via report/pdf }
+        pdf_sha256: { type: string, nullable: true, description: Hash del PDF para verificar la copia archivada en Conectar }
+        updated_at: { type: string, format: date-time }
+
+    PacsEvent:
+      type: object
+      required: [event_id, event_type, occurred_at]
+      properties:
+        event_id: { type: string, format: uuid, description: Unico; clave de idempotencia }
+        event_type:
+          type: string
+          enum:
+            - STUDY_UPLOAD_STARTED
+            - STUDY_RECEIVED
+            - STUDY_INCOMPLETE
+            - STUDY_READY
+            - REPORT_DRAFTED
+            - REPORT_SIGNED # v3 - producido por el PACS al firmar; dispara en Conectar la descarga del PDF y el pase a INFORMADO
+            - STUDY_ERROR
+            - WEBHOOK_TEST
+        occurred_at: { type: string, format: date-time }
+        order_id: { type: integer, nullable: true }
+        accession_number: { type: string, nullable: true }
+        study_instance_uid: { type: string, nullable: true }
+        payload:
+          type: object
+          additionalProperties: true
+          description: Sin URLs S3 permanentes ni datos clinicos innecesarios.

@@ -1,0 +1,275 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-primary-border: var(--sidebar-primary-border);
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-accent-border: var(--sidebar-accent-border);
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -8; 
+
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+
+  /* Light mode palette (fallback) */
+  --background: 210 40% 96%;
+  --foreground: 220 40% 13%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 204 53% 49%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 220 40% 13%;
+  --card-border: 214 32% 91%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 40% 13%;
+  --popover-border: 214 32% 91%;
+
+  --primary: 204 53% 49%; 
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --sidebar: 220 48% 8%;
+  --sidebar-foreground: 217 38% 94%;
+  --sidebar-border: 216 26% 22%;
+  --sidebar-primary: 204 53% 49%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 219 38% 15%;
+  --sidebar-accent-foreground: 217 38% 94%;
+  --sidebar-ring: 204 53% 49%;
+
+  --chart-1: 204 53% 49%;
+  --chart-2: 210 40% 96%;
+  --chart-3: 215 16% 47%;
+  --chart-4: 214 32% 91%;
+  --chart-5: 220 40% 13%;
+
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-serif: Georgia, serif;
+  --app-font-mono: Menlo, monospace;
+  --radius: 0.25rem;
+}
+
+.dark {
+  --background: 0 0% 7%; /* #121212 (prueba; antes 219 42% 11% #101827) */
+  --foreground: 0 0% 84%; /* #D6D6D6 (gris claro, no blanco puro) */
+
+  --border: 0 0% 30%; /* gris oscuro neutro, bordes marcados */
+  --input: 0 0% 32%;
+  --ring: 204 53% 49%; /* Blue ring */
+
+  --card: 0 0% 12%; /* #1E1E1E gris neutro */
+  --card-foreground: 0 0% 84%; /* #D6D6D6 */
+  --card-border: 0 0% 30%;
+
+  --popover: 0 0% 12%; /* #1E1E1E */
+  --popover-foreground: 0 0% 84%; /* #D6D6D6 */
+  --popover-border: 0 0% 32%;
+
+  --primary: 204 53% 49%; /* Blue */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 0 0% 10%; /* #1A1A1A */
+  --secondary-foreground: 0 0% 84%; /* #D6D6D6 */
+
+  --muted: 0 0% 10%; /* #1A1A1A */
+  --muted-foreground: 0 0% 65%; /* gris medio */
+
+  --accent: 0 0% 16%; /* #292929 */
+  --accent-foreground: 0 0% 84%; /* #D6D6D6 */
+
+  --destructive: 0 84% 60%; /* Red */
+  --destructive-foreground: 210 40% 98%;
+
+  --sidebar: 0 0% 9%; /* #171717 */
+  --sidebar-foreground: 0 0% 84%; /* #D6D6D6 */
+  --sidebar-border: 0 0% 28%;
+  --sidebar-primary: 204 53% 49%;
+  --sidebar-primary-foreground: 210 40% 98%;
+  --sidebar-accent: 0 0% 14%; /* #242424 */
+  --sidebar-accent-foreground: 0 0% 84%; /* #D6D6D6 */
+  --sidebar-ring: 204 53% 49%;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply font-sans antialiased bg-background text-foreground; }
+}
+
+/* Textura crayón para los óvalos de estado (grano tipo lápiz/crayón) */
+.estado-crayon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+  .estado-crayon {
+    background-image: none;
+  }
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --card-border: 0 0% 80%;
+    --border: 0 0% 80%;
+  }
+  * {
+    color: black !important;
+    background: transparent !important;
+    border-color: #ccc !important;
+  }
+  .document-view {
+    @apply bg-white text-black p-0 m-0 shadow-none border-none;
+  }
+}
+
+.document-view {
+  @apply bg-white text-black min-h-full;
+}
+.document-view .dark {
+  @apply bg-white text-black;
+}
+
+
+/* Marquee de avisos de puesto (pedido de asistencia que corre por pantalla) */
+@keyframes aviso-marquee {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+.aviso-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: aviso-marquee 14s linear infinite;
+}
+/* Variante que pasa una sola vez (ej: "salió de su puesto"), más lenta para
+   que dé tiempo a leerla */
+.aviso-marquee-una-vez {
+  animation-duration: 28s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/* Mascota del asistente de turnos (muñeco SVG propio) */
+/* Reposo: cuerpo se balancea suave y el brazo saluda */
+@keyframes mascota-bob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-1.5px) rotate(2deg); }
+}
+.mascota-reposo .mascota-cuerpo,
+.mascota-buscando .mascota-cuerpo {
+  animation: mascota-bob 2.4s ease-in-out infinite;
+  transform-box: view-box;
+  transform-origin: 50% 85%;
+}
+.mascota-buscando .mascota-cuerpo { animation-duration: 1s; }
+
+@keyframes mascota-brazo-saludo {
+  0%, 100% { transform: rotate(52deg); }
+  50% { transform: rotate(70deg); }
+}
+.mascota-reposo .mascota-brazo {
+  animation: mascota-brazo-saludo 2.4s ease-in-out infinite;
+  transform-box: view-box;
+  transform-origin: 84% 78%;
+}
+
+/* Buscando: la mano sube y queda de visera sobre los ojos, con leve rebote */
+@keyframes mascota-brazo-visera {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+.mascota-buscando .mascota-brazo {
+  animation: mascota-brazo-visera 1s ease-in-out infinite;
+  transform-box: view-box;
+  transform-origin: 84% 78%;
+}
+
+/* Buscando: las pupilas escanean de lado a lado */
+@keyframes mascota-escanear {
+  0%, 100% { transform: translateX(-2.5px); }
+  50% { transform: translateX(2.5px); }
+}
+.mascota-buscando .mascota-pupilas {
+  animation: mascota-escanear 1s ease-in-out infinite;
+}

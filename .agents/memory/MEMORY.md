@@ -1,0 +1,92 @@
+- [Drizzle date fields](drizzle-date-strings.md) — fecha columns use mode:"string"; Zod codegen returns Date objects that must be converted before DB queries.
+- [Orval Zod compat](orval-zod-compat.md) — project uses Zod v3 with zod/v4 import path; avoid format:email and bare type:object in OpenAPI spec.
+- [Drizzle push non-interactive](drizzle-push-non-interactive.md) — data-loss prompts hard-fail in sandbox; apply via raw psql SQL instead.
+- [Auth session persistence](auth-session-persistence.md) — tokenStore is in-memory write-through cache backed by sesiones table; all route files must use getUserIdFromToken (async) not tokenStore.get (sync).
+- [Pulso estudios/informes](pulso-estudios.md) — estudios synced to local table; report HTML/PDF fetched live via proxy; sanitize external HTML + validate PDF signature; relink-by-DNI closes incremental-window gap.
+- [Phir-it PACS API](phirit-api.md) — imaging API returns errors in JSON `mensaje` on HTTP 200; check mensaje not just res.ok; token ~1h; don't log DNI; allowlist viewer host.
+- [Import v2 at scale](importacion-v2-scale.md) — big imports run background+chunked; resume offset/counters must come from the audit log (durable) not job counters; polling excludes filasData blob.
+- [Phir-it portal scraping](phirit-portal-scraping.md) — external portal has no outbound webhook; login quirks (trim creds, antiforgery, .AspNetCore.Session), detail needs ?route base64, and the study "ID" == patient DNI.
+- [Legacy fetch auth](legacy-fetch-auth.md) — old frontend pages fetch without Bearer headers; adding auth to an endpoint requires updating its frontend callers (token in localStorage "auth_token").
+- [Wouter v3 wildcard routes](wouter-route-wildcards.md) — "/prefix*" does NOT match subroutes; use "/prefix/*?" or nest, else routes fall through to the catch-all.
+- [Secrets in bash curl](secrets-in-bash-curl.md) — sandbox mangles secret env vars interpolated into curl; test token-protected endpoints via node fetch reading process.env.
+- [Prod data seeding](prod-data-seeding.md) — prod DB is separate and read-only for the agent; seed it via the published app's import API with admin login (CSV headers = field keys).
+- [Autopilot extraction](autopilot-extraction.md) — schedule template NOT exposed; reconstruct días/horarios/duración by aggregating real slots from alephoo.turnosDisponibles per agendaId.
+- [Flujo administrativo Klinicos](klinicos-flujo.md) — post-login exige elegir establecimiento/sector/puesto; token lo genera el paciente en su app; ver docs/klinicos-flujo-administrativo.md.
+- [Anti doble-reserva](turnos-slot-unique.md) — índice único parcial en turnos protege el slot; inserts deben mapear 23505 a 409 y los tests crear slots distintos.
+- [Prod schema drift pending](prod-schema-pending.md) — el server auto-aplica drift aditivo (columnas/tablas) al arrancar; DATA e índices/FK con advertencia siguen siendo manuales.
+- [Klinicos portal](klinicos-portal.md) — cadena TLS incompleta requiere CA Sectigo embebida; el Agent de undici solo funciona con el fetch del mismo paquete, no el global.
+- [Profesionales duplicados](profesionales-duplicados.md) — dobles importaciones duplican profesionales; limpiar desactivando (nunca DELETE); pickers deben filtrar activos.
+- [Agendas modelo en prod](prod-agendas-modelo.md) — turneras demo id 1–6 desactivadas; la reserva filtra solo por activa, no por visibilidad.
+- [PACS workspace contract](pacs-workspace-contract.md) — módulo Estudios bloqueado por migración S3 del PACS y confirmación del contrato; docs en docs/pacs-workspace-*.
+- [Validación token interna](robot-token-validacion.md) — el token IOMA se valida con el automatizador interno (solo lectura contra Klinicos); Robot externo solo respaldo; datos faltantes → MANUAL_REVIEW sin loop.
+- [PG index IMMUTABLE rules](pg-index-immutable.md) — expresiones y predicados de índice PG deben ser IMMUTABLE: unaccent→wrapper f_unaccent, gin_trgm_ops→DO block, CURRENT_DATE prohibido en WHERE de índice.
+- [clinica-db pipeline types](clinica-db-pipeline-types.md) — EstadoFilaPipeline femenino ("rechazada", "incorporada"); FilaAlephooStaging tiene estado+erroresValidacion; OpcionesPipeline tiene iniciadaPor+skipIncorporacion.
+- [Estilo crayón estados](estilo-crayon-estados.md) — chips de estado en dark: sólido desaturado + textura .estado-crayon + texto blanco; sin transparencias; Informado=verde. Aprobado por el usuario.
+- [PACS worklist v3](pacs-worklist-v3.md) — webhook nuevo en /pacs/worklist/webhook/eventos (el path viejo /pacs/webhook/eventos es de otro contrato); sim en memoria; idempotencia por advisory lock en la tx que escribe.
+- [clinica-db AWS integration](clinica-db-aws-integration.md) — integración condicional a CLINICA_DB_URL; api-server NO tiene @types/pg por defecto; SQL migrations deben copiarse a dist/migrations/sql/ en Docker.
+- [Preferencias de usuario en AWS](preferencias-usuario-aws.md) — regla datos usuario→AWS con guard prod obligatorio; pg debe ser external en esbuild del api-server.
+- [Agendas unificadas](agendas-unificadas.md) — turneras de mismo profesional+sede+horario se fusionan en una; ojo con reimportaciones que pueden recrear los duplicados por día.
+- [Estimación de espera](espera-estimacion.md) — demora = promedio llamar→finalizar de la última hora ÷ pool de médicos con actividad real; NUNCA usar el flag demanda espontánea para el pool (queda prendido).
+- [Demanda espontánea](demanda-espontanea.md) — bolsa esGuardia sin médico; POST guardia solo staff; ingreso se forma detrás del último recepcionado con turno.
+- [HC = DNI](hc-igual-dni.md) — numero_hc es el DNI del paciente; todo camino de alta/edición debe fijarlo y hay migración idempotente al arrancar.
+- [Pacientes DNI único global](pacientes-dni-unique.md) — el índice único de dni cubre inactivos; crear con DNI de ficha inactiva debe reactivarla, nunca insertar (23505→409).
+- [UI legible en tema claro](ui-tema-claro.md) — el staff usa tema claro; texto sobre fondos tintados debe declarar ambos temas (text-x-800 dark:text-x-200) o queda invisible.
+- [Alephoo .xls encoding](alephoo-xls-encoding.md) — exports Alephoo son HTML con bytes NUL: leer latin1 + strip \u0000; utf-8 corrompe todos los acentos.
+- [Usuarios default dev vs prod](usuarios-default-prod.md) — el server crea usuarios por perfil al arrancar; en prod el email puede existir con otra clave: resetear vía PATCH /api/usuarios con admin.
+- [Código de envío Conectar](codigo-envio-conectar.md) — practice_code = klinicos_practicas.codigo_envio textual exacto (+/-, /A /B); sin código → MANUAL_REVIEW, nunca inventar.
+- [Estudios multi-código](practicas-multicodigo.md) — catalogo.codigos guarda todos los códigos (con repeticiones=cantidad); al tildar en agenda se expande a una fila por código; cantidades NO viven en turnera_practicas.
+- [Robot órdenes push](robot-ordenes-push.md) — cola saliente: 401/403 se reintentan, reencolar rearma error_permanente; integraciones nunca importan de routes/*.
+- [Alcance del rol médico](alcance-medico.md) — medico solo ve turnos/pacientes de sus turneras (propias, grupales o guardia); helpers en api-server/src/lib/alcance-medico.ts; tests crean turnera+turno "scope".
+- [Agente recepción tools](agente-recepcion-tools.md) — tools del chat IA nunca reimplementan lógica: crear_turno llama a POST /turnos interno con el token del usuario; rondas persistidas en metadata.toolRounds.
+- [Perfiles médicos](perfiles-medicos.md) — perfil "medico" común eliminado del input; combinado medico_consulta_informante; migración idempotente al arrancar.
+- [Verificación de órdenes](ordenes-verificacion.md) — QR "Validación de veracidad" solo en órdenes de baja complejidad; token perezoso al primer PDF; comparte rate limit con certificados.
+- [Certificados digitales](certificados-digitales.md) — inmutables con estados revocado/reemplazado, PDF snapshot base64, número CT derivado de id+fecha, rate limit público 30/min.
+- [Certificados de guardia](certificados-guardia.md) — protocolo institucional: máx 48 h desde guardia, reposo con correlato clínico, alarmas bloquean alta simple, texto fijo.
+- [Push certificados a app paciente](app-paciente-push.md) — cola siempre encola; envía solo con APP_PACIENTE_PUSH_URL/TOKEN configuradas; contrato pendiente de confirmar con el portal.
+- [Derivaciones trazabilidad](derivaciones-trazabilidad.md) — circuito pedido→agendado→realizado→informado; recetas siguen con "emitida", no unificar enums; estados espejados back/front/openapi.
+- [Valoraciones de atención](valoraciones-satisfaccion.md) — fila = cola de push a la app; POST público debe ser update atómico (token + puntaje IS NULL); contrato con el portal pendiente.
+- [Prod app usa AWS](prod-db-aws-split.md) — la app publicada opera contra CLINICA_DB en AWS; executeSql prod lee la base Replit vieja (stale); verificar/escribir vía la API publicada.
+- [Validación suite compartida](validacion-suite-compartida.md) — no correr vitest local durante la validación; fixtures huérfanos y 2 tests intermitentes conocidos rompen la suite completa.
+- [Tests contra la DB compartida](tests-db-compartida.md) — suites deben sembrar su catálogo y matchear por RUN_ID; corridas abortadas dejan restos; caches en memoria se invalidan en el endpoint de escritura.
+- [Recuperación de clave sin mail](recuperacion-clave-sin-mail.md) — flujo in-app elegido; matching pedido→usuario debe seguir el criterio del login; cambios de clave revocan sesiones.
+- [Llamado = EN CONSULTA](llamado-en-consulta.md) — llamar ahora transiciona a estado "llamado" y bloquea al paciente para otros médicos hasta Finalizar Consulta; guard atómico en el UPDATE.
+- [Salas de llamado TV](salas-llamado.md) — pantallas filtran por sala elegida por el médico; precedencia sala > turnera > sede en 4 lugares sincronizados.
+- [Firma de planillas IOMA](firma-planillas.md) — firma/sello solo con firma_estado='firmada'; auto-firma al emitir si emite el prescriptor real; admin deja pendiente; firmada = inmutable.
+- [Deployment run command](deployment-run-command.md) — el publish exige build/run en [deployment] de .replit; no usar el build global (vite configs exigen PORT).
+- [Códigos efímeros TV](tv-vinculacion-codigos.md) — códigos cortos temporales van en config_sistema con prefijo+TTL, sin tabla nueva; consumo de una sola entrega.
+- [Base conectar_app_dev aislada](clinica-dev-db.md) — dev usa conectar_app_dev en el mismo RDS; el resolver reescribe la URL si apunta a la base real; f_unaccent de 001 falla en bases nuevas PG15+.
+- [Órdenes manuscritas](ordenes-manuscritas.md) — 5 fuentes manuscritas embebidas, una fija por profesional; órdenes de estudio salen B/N efecto escaneado vía prepararDatosPdf (fail-open).
+- [Typecheck db stale](typecheck-db-stale.md) — errores falsos de columnas inexistentes: recompilar lib/db con `tsc -b`; runtime usa src, typecheck usa dist.
+- [Pruebas controladas en prod](pruebas-controladas-prod.md) — escenario TEST por API de la app publicada (gestión usuarios = desarrollador/gerente; marca naranja pisa la fila rosa; limpiar y restaurar todo).
+- [Credencial fixture médico](medico-test-password.md) — los tests de api-server usan una clave fija (ver MEDICO_PASS en __tests__) para el usuario médico; no resetearla sin restaurar.
+- [Seeding columnas nuevas en prod](prod-api-campos-nuevos.md) — la API publicada stripea campos que su build no conoce (200 sin escribir); usar seed idempotente de arranque; soloAdmin = gerente@/desarrollador@.
+- [Caligrafía elección única](caligrafia-eleccion-unica.md) — el médico elige su letra una vez (409 después); sorteo por defecto congelado en las 5 bases originales.
+- [Varias prácticas por turno](turno-multi-practicas.md) — turno_practicas guarda el conjunto; klinicos_practica_id sigue como principal; practice_code nunca combina códigos.
+- [RPA Klinicos etapas 1-3](rpa-klinicos-etapas.md) — automatizador interno elegido; token completo se guarda pero el RPA solo expone enmascarado; Doppler/resonancia excluidas; simulación persiste payload en klinicos_trabajos.
+- [Encolado Klinicos al reservar](klinicos-encolado-reserva.md) — turnos de prácticas se cargan al reservar (pendientes de token); cancelar el turno cancela el trabajo en todos los estados previos a la carga.
+- [Orden de respaldo automática](robot-orden-respaldo.md) — el worker usa la orden existente del turno o crea una (lock por paciente+práctica, siempre pendiente_validacion, sin PACS).
+- [Pool de cuentas Klinicos](klinicos-pool-cuentas.md) — KLINICOS_USUARIO/_2/_3 rotan por login (round-robin) y el worker paraleliza trabajos hasta el nº de cuentas; el portal invalida sesiones del mismo usuario.
+- [Klinicos carga real](klinicos-carga-real.md) — el portal exige Parentesco (dry-run no lo ve); rechazo con validación explícita limpia la guarda de reintento; prestación en Consultorios queda manual.
+- [Whaticket API](whaticket-api.md) — envío WhatsApp vía POST /messages {connectionId, messages:[…]}; canal WABA exige templateId aprobado por Meta; UUID y templateId los pasa el usuario.
+- [Autologin link mágico](autologin-link-magico.md) — tokens de ingreso hasheados en config_sistema, un solo uso; todo reset/cambio de clave debe revocarlos.
+- [AppLayout hooks antes de returns](app-layout-hooks.md) — hooks nuevos SIEMPRE antes de los returns tempranos; un useEffect mal ubicado dejó prod en blanco (ago 2026).
+- [Llave autoenvíos Klinicos](klinicos-autoencolado.md) — klinicos_autoencolado='off' frena solo origen 'auto'; disparador vigente para consultas: SOLO Validar Token (manual); prácticas se encolan al reservar; origen 'auto' sigue frenado por el kill-switch.
+- [Pre-carga de consultas REVERTIDA](klinicos-precarga-registro.md) — regla de facturación: la consulta NO puede generarse antes del token; se crea solo al Validar Token. No reintroducir pre-cargas sin token.
+- [ARM v2 por módulos](arm-v2-modulos.md) — robot Klinicos reconstruido módulo a módulo con aprobación previa; el ingreso ambulatorio crea la consulta, fail-closed en todo.
+- [Cartel token regla única](token-cartel-regla-unica.md) — verde SOLO con token_status=ACCEPTED + bono persistido; enum real ACCEPTED/DENIED; token guardado ≠ habilitada.
+- [Circuito Klinicos validado](klinicos-circuito-validado.md) — consultas Clínica Médica e2e aprobado y probado en prod (carga sin token → token una sola vez → bono); reglas inviolables.
+- [Especialidades de consulta Klinicos](klinicos-cardiologia.md) — correlación SOLO DNI+especialidad+día; cardio rota 5 sembrados; trauma ("ORTOPEDIA Y TRAUMATOLOGIA", matchear por inclusión) y gineco rotan del desplegable; motivos propios por especialidad.
+- [Password RDS AWS rechazada](aws-rds-password.md) — si dev y prod caen juntos con 28P01, la clave rotó del lado de AWS; actualizar CLINICA_DB_URL/_DEV en secrets y republicar.
+- [Config agendas de prácticas](agendas-practicas-config.md) — checklist para que el robot cargue una agenda nueva solo: prácticas tildadas + campos klinicos* + prescriptor con matrícula; eq_especialidades NO aplica al worker.
+- [URL pública en prod](url-publica-prod.md) — REPLIT_DOMAINS[0] en prod es el .replit.app, no el dominio propio; QRs/links públicos usan URL_PUBLICA_APP (production) y requiere republicar.
+- [Llamador con Pixel](pixel-llamador.md) — avisos de llamado Conectar→Pixel (/integration/llamador, campos opcionales omitidos) + GET salas x-api-key; payload pendiente de confirmar con Pixel.
+- [Órdenes bilaterales](ordenes-bilaterales.md) — estudios "ambas": ficha por lado + lado más doloroso obligatorio + frase "sobrecarga compensatoria o enfermedad bilateral"; catálogo sin prácticas bilaterales → toggle manual.
+- [Guard de envío a Pixel](pixel-envio-guard.md) — mutaciones a Pixel solo en prod (PIXEL_INTEGRACION_ACTIVA para overridear); cobertura por COALESCE(turnera, especialidad); reconciliador solo fecha>=hoy.
+- [Guardia presencial](guardia-presencial.md) — modalidad presencial usa estado "confirmado" (ocupa fila en guardia), botón "ya llegué" confirmado→arribo, allowlist guardia_presencial_dnis_prueba.
+- [Guardia virtual IOMA](guardia-virtual.md) — antesala local sin turno; token→turno videoconsulta en bolsa esGuardia; feature apagado por config_sistema hasta activarlo en prod.
+- [Guardia virtual portal](guardia-virtual-portal.md) — push de videollamadas: videollamadaId obligatorio y en TEXTO; tu_turno exige link; hooks fire-and-forget en transiciones.
+- [Planilla Conectar practice_code](conectar-codigos-planilla.md) — el Robot exige el código de facturación exacto de la planilla (combos con separadores propios); override por práctica + planilla embebida.
+- [Anulación Klinicos](klinicos-anulacion.md) — anularOrden exige motivo + Id de fila (no el nro); cancelar turno cargado → anulacion_pendiente → worker fail-closed sin reintentos.
+- [Importación turnos detallados](importacion-turnos-detallados.md) — cargas masivas SOLO por el endpoint admin dedicado (directo a DB, idempotente); nunca POST /turnos (dispara automatizaciones).
+- [API pública de turnos](api-publica-turnos.md) — cancelar/reprogramar/idempotencia para la app del paciente; claves idem en config_sistema con huella; pendientes: avisos salientes, QR llegada, padrón.
+- [Check in público de consultas](checkin-publico-consultas.md) — app del paciente ve todas las agendas y valida token vía handler compartido; guardias incluidas salvo Odontología; prácticas/Pixel quedan en recepción.

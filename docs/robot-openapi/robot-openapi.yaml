@@ -1,0 +1,535 @@
+openapi: 3.0.3
+info:
+  title: Robot KLINICOS — API de integración para Conectar (flujo de consultas)
+  version: "1.0.0"
+  description: |
+    Contrato DEFINITIVO (19/07/2026) del flujo transaccional único
+    Conectar → Robot → KLINICOS.
+
+    ## Regla definitiva de resolución
+    Conectar NO envía `specialty` ni `performing_professional` (si vinieran se
+    ignoran por completo: no se guardan ni cuentan para la idempotencia).
+    El Robot deriva todo desde `practice.id`:
+
+    `practice.id → práctica KLINICOS (equivalencia aprobada) → especialidad
+    requerida → grupo aprobado de profesionales → un profesional`.
+
+    El profesional elegido queda FIJADO al `request_id`: los reintentos
+    reutilizan la asignación del primer intento (no vuelven a rotar).
+    Una práctica nunca puede caer en la rotación de otra especialidad.
+
+    ## Autenticación
+    Todas las llamadas llevan el header `X-Api-Key` con la clave de
+    integración compartida. Sin clave o clave incorrecta → 401.
+
+    ## Idempotencia y mutaciones (mismo `request_id`)
+    - Re-enviar el pedido idéntico devuelve el resultado guardado sin
+      re-consumir el token.
+    - `DATA_REQUIRED`: solo pueden completarse los campos faltantes o que
+      estaban vacíos; cambiar un valor ya enviado → 409.
+    - `MAPPING_REQUIRED` / `TECHNICAL_ERROR`: el pedido debe reenviarse
+      IDÉNTICO (la corrección se hace en el panel del Robot).
+    - `TOKEN_REENTRY_REQUIRED`: solo puede cambiar el token (debe ser NUEVO).
+    - Cualquier otro cambio → 409 con la lista de campos que difieren.
+    - Un `consultation_id` admite un solo `request_id` (reuso → 409).
+
+    ## Flujo asincrónico
+    Si la operación no termina en ~15 segundos, el POST responde
+    `status: PROCESSING` con el bloque `queue`; Conectar hace polling con
+    `GET /requests/{request_id}` (estrictamente read-only) hasta el estado
+    final.
+
+    ## Token
+    Nunca se almacena en texto plano. Se conserva cifrado SOLO mientras el
+    caso espera una corrección; se elimina en todo estado final y a los
+    120 minutos (pasa a `TOKEN_REENTRY_REQUIRED`: re-enviar el POST con el
+    MISMO `request_id` y un token nuevo).
+
+    ## Entorno de simulación (sandbox)
+    Con el sandbox activo (`GET /health` responde `"sandbox": true`) el Robot
+    NUNCA opera KLINICOS ni usa pacientes/tokens reales. Misma autenticación
+    `X-Api-Key` y mismo contrato. Los ocho estados se disparan así:
+
+    | Cómo dispararlo                                        | Estado resultante |
+    |--------------------------------------------------------|-------------------|
+    | DNI terminado en `0007` (seguir por GET)                | `PROCESSING` → `TOKEN_ACCEPTED` |
+    | Cualquier otro DNI válido (p. ej. `30110003`)           | `TOKEN_ACCEPTED` |
+    | DNI terminado en `0005`                                 | `TOKEN_DENIED` |
+    | Omitir campos obligatorios (p. ej. sin `token`)         | `DATA_REQUIRED` |
+    | `practice.id` sin equivalencia aprobada                 | `MAPPING_REQUIRED` |
+    | DNI terminado en `0001` (inexistente) o `0002` (duplicado) | `MANUAL_REVIEW` |
+    | DNI terminado en `0006`                                 | `TOKEN_REENTRY_REQUIRED` |
+    | DNI terminado en `0009`                                 | `TECHNICAL_ERROR` |
+
+    Toda referencia generada en sandbox lleva prefijo `SIM` y las transiciones
+    quedan marcadas `[sim:proceso]`.
+servers:
+  - url: https://web-automation-bot.replit.app/api
+    description: Producción (el flujo responde 503 hasta que se habilite)
+tags:
+  - name: consultas
+    description: Flujo transaccional único de consultas
+paths:
+  /v1/klinicos/consultations/process:
+    post:
+      operationId: procesarConsulta
+      tags: [consultas]
+      summary: Procesar una consulta (validación, asignación, prestación y token)
+      parameters:
+        - $ref: "#/components/parameters/ApiKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConsultaProcesoEntrada"
+            examples:
+              pedidoCompleto:
+                summary: Pedido completo (contrato definitivo, sin specialty ni performing_professional)
+                value:
+                  request_id: "req-2026-000123"
+                  consultation_id: "cons-98765"
+                  patient:
+                    document_type: "DNI"
+                    document_number: "30123456"
+                    first_name: "María"
+                    last_name: "Gómez"
+                    birth_date: "1980-01-01"
+                    affiliate_number: "AF-556677"
+                    affiliate_type: "OBL"
+                  coverage: { insurer: "IOMA", plan: "GENERAL" }
+                  practice:
+                    id: "PRACT-ECO-001"
+                    code: "42.01.01"
+                    description: "Ecografía abdominal"
+                    catalog: "NBU"
+                    quantity: 1
+                  site: { id: "sede-central", name: "Sede Central" }
+                  scheduled_at: "2026-07-19T12:00:00Z"
+                  diagnosis: { code: "R10.4", description: "Dolor abdominal" }
+                  token: "482913"
+      responses:
+        "200":
+          description: Estado del proceso (final o PROCESSING con datos de cola)
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConsultaProcesoRespuesta"
+              examples:
+                aceptado:
+                  summary: Token aplicado con éxito
+                  value:
+                    request_id: "req-2026-000123"
+                    consultation_id: "cons-98765"
+                    status: "TOKEN_ACCEPTED"
+                    attempt_number: 1
+                    requires_manual_action: false
+                    retry_allowed: false
+                    missing_fields: []
+                    mapping_required: []
+                    reason_code: null
+                    reason_message: null
+                    authorization_number: "A-778899"
+                    klinicos_reference: "ECOGRAFIA ABDOMINAL 19/07/2026"
+                    prestation_created: false
+                    queue: null
+                    validated_at: "2026-07-19T12:00:41Z"
+                    latency_ms: 40200
+                procesando:
+                  summary: Sigue en proceso (hacer polling del GET)
+                  value:
+                    request_id: "req-2026-000123"
+                    consultation_id: "cons-98765"
+                    status: "PROCESSING"
+                    attempt_number: 1
+                    requires_manual_action: false
+                    retry_allowed: false
+                    missing_fields: []
+                    mapping_required: []
+                    reason_code: null
+                    reason_message: "La operación sigue en proceso. Consultar GET /requests/{request_id}."
+                    authorization_number: null
+                    klinicos_reference: null
+                    prestation_created: false
+                    queue:
+                      pending_operations: 2
+                      approx_position: 3
+                      estimated_wait_seconds: 120
+                      klinicos_session_available: true
+                    validated_at: null
+                    latency_ms: null
+                faltanDatos:
+                  summary: Campos faltantes o inválidos
+                  value:
+                    request_id: "req-2026-000123"
+                    consultation_id: "cons-98765"
+                    status: "DATA_REQUIRED"
+                    attempt_number: 1
+                    requires_manual_action: false
+                    retry_allowed: true
+                    missing_fields: ["practice.id", "patient.affiliate_number", "token"]
+                    mapping_required: []
+                    reason_code: "DATA_REQUIRED"
+                    reason_message: "Faltan datos o son inválidos. Completar y re-enviar el mismo request_id."
+                    authorization_number: null
+                    klinicos_reference: null
+                    prestation_created: false
+                    queue: null
+                    validated_at: null
+                    latency_ms: null
+                mapeoPendiente:
+                  summary: Práctica sin especialidad asignada (se corrige en el panel del Robot)
+                  value:
+                    request_id: "req-2026-000123"
+                    consultation_id: "cons-98765"
+                    status: "MAPPING_REQUIRED"
+                    attempt_number: 1
+                    requires_manual_action: false
+                    retry_allowed: true
+                    missing_fields: []
+                    mapping_required:
+                      - kind: "practice"
+                        value: "PRACT-ECO-001"
+                        problem: "PRACTICE_WITHOUT_SPECIALTY"
+                    reason_code: "MAPPING_REQUIRED"
+                    reason_message: "Faltan equivalencias o reglas aprobadas. Se corrigen en el panel del Robot y se reintenta el mismo request_id."
+                    authorization_number: null
+                    klinicos_reference: null
+                    prestation_created: false
+                    queue: null
+                    validated_at: null
+                    latency_ms: null
+                denegado:
+                  summary: Token denegado por IOMA
+                  value:
+                    request_id: "req-2026-000123"
+                    consultation_id: "cons-98765"
+                    status: "TOKEN_DENIED"
+                    attempt_number: 1
+                    requires_manual_action: false
+                    retry_allowed: false
+                    missing_fields: []
+                    mapping_required: []
+                    reason_code: "TOKEN_DENIED"
+                    reason_message: "Token denegado"
+                    authorization_number: null
+                    klinicos_reference: null
+                    prestation_created: false
+                    queue: null
+                    validated_at: "2026-07-19T12:00:41Z"
+                    latency_ms: 39100
+                revisionTecnica:
+                  summary: Caso derivado a revisión (Conectar no ve el detalle interno)
+                  value:
+                    request_id: "req-2026-000123"
+                    consultation_id: "cons-98765"
+                    status: "MANUAL_REVIEW"
+                    attempt_number: 1
+                    requires_manual_action: true
+                    retry_allowed: false
+                    missing_fields: []
+                    mapping_required: []
+                    reason_code: "MANUAL_REVIEW"
+                    reason_message: "En revisión técnica"
+                    authorization_number: null
+                    klinicos_reference: null
+                    prestation_created: false
+                    queue: null
+                    validated_at: null
+                    latency_ms: null
+        "400":
+          description: Falta request_id o consultation_id
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+              example: { error: "Falta request_id" }
+        "401":
+          $ref: "#/components/responses/NoAutorizado"
+        "409":
+          description: Mutación no permitida o consultation_id reusado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+              examples:
+                mutacion:
+                  value: { error: "request_id ya usado con otros datos; difieren: patient.document_number" }
+                consultaReusada:
+                  value: { error: "consultation_id ya usado con request_id req-2026-000001" }
+        "429":
+          description: Demasiadas solicitudes (reintentar en un momento con el MISMO request_id)
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+              example: { error: "Demasiadas solicitudes. Esperar un momento y reintentar (mismo request_id)." }
+        "503":
+          description: Integración no configurada o flujo desactivado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+              example: { error: "El flujo de consultas no está habilitado." }
+  /v1/klinicos/consultations/requests/{request_id}:
+    get:
+      operationId: consultarProceso
+      tags: [consultas]
+      summary: Estado de un proceso por request_id (polling, estrictamente read-only)
+      description: Solo lee la base; nunca opera KLINICOS ni consume el token.
+      parameters:
+        - $ref: "#/components/parameters/ApiKey"
+        - name: request_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Estado actual
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConsultaProcesoRespuesta"
+        "401":
+          $ref: "#/components/responses/NoAutorizado"
+        "404":
+          description: request_id no encontrado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+              example: { error: "request_id no encontrado" }
+  /v1/klinicos/consultations/requests/{request_id}/retry:
+    post:
+      operationId: reintentarProceso
+      tags: [consultas]
+      summary: Reintento con el token pendiente guardado (nuevo intento)
+      description: |
+        Re-ejecuta el caso con el token cifrado guardado (`attempt_number` + 1).
+        El profesional asignado se conserva (fijado al request_id).
+        Estados finales devuelven lo guardado sin re-consumir el token.
+        Si el token venció (120 min) responde 409: re-enviar el POST con el
+        MISMO request_id y un token NUEVO.
+      parameters:
+        - $ref: "#/components/parameters/ApiKey"
+        - name: request_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Resultado del reintento
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConsultaProcesoRespuesta"
+        "401":
+          $ref: "#/components/responses/NoAutorizado"
+        "404":
+          description: request_id no encontrado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+        "409":
+          description: Token vencido o sin token guardado (re-enviar el POST con token nuevo)
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+              example: { error: "El token guardado venció. Re-enviar el POST con el mismo request_id y un token nuevo." }
+        "503":
+          description: Flujo desactivado
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+  /v1/klinicos/consultations/health:
+    get:
+      operationId: saludConsultas
+      tags: [consultas]
+      summary: Salud operativa del flujo (cola y sesión; sin datos clínicos)
+      parameters:
+        - $ref: "#/components/parameters/ApiKey"
+      responses:
+        "200":
+          description: Estado operativo
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SaludConsultas"
+              example:
+                enabled: true
+                queue:
+                  pending_operations: 0
+                  approx_position: null
+                  estimated_wait_seconds: null
+                  klinicos_session_available: true
+                totals_by_status:
+                  TOKEN_ACCEPTED: 12
+                  MANUAL_REVIEW: 1
+                timestamp: "2026-07-19T12:00:00Z"
+        "401":
+          $ref: "#/components/responses/NoAutorizado"
+components:
+  parameters:
+    ApiKey:
+      name: X-Api-Key
+      in: header
+      required: true
+      description: Clave de integración compartida (INTEGRACION_API_KEY)
+      schema: { type: string }
+  responses:
+    NoAutorizado:
+      description: Clave de API ausente o inválida
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/ErrorRespuesta" }
+          example: { error: "No autorizado" }
+  schemas:
+    ErrorRespuesta:
+      type: object
+      required: [error]
+      properties:
+        error: { type: string }
+    ConsultaProcesoEntrada:
+      type: object
+      description: >
+        Contrato definitivo: sin specialty ni performing_professional (si se
+        envían, se ignoran). La especialidad se deriva exclusivamente de la
+        equivalencia aprobada de practice.id.
+      required: [request_id, consultation_id, patient, coverage, practice, scheduled_at, diagnosis, token]
+      properties:
+        request_id:
+          type: string
+          description: Identificador único e inmutable del pedido (idempotencia)
+        consultation_id:
+          type: string
+          description: Consulta de Conectar; admite un solo request_id
+        patient:
+          type: object
+          required: [document_type, document_number, first_name, last_name, affiliate_number]
+          properties:
+            document_type: { type: string, description: "Por ahora solo DNI" }
+            document_number: { type: string, description: "6 a 9 dígitos, sin puntos" }
+            first_name: { type: string }
+            last_name: { type: string }
+            birth_date: { type: string, nullable: true, description: "AAAA-MM-DD (opcional)" }
+            affiliate_number: { type: string }
+            affiliate_type: { type: string, nullable: true }
+        coverage:
+          type: object
+          required: [insurer]
+          properties:
+            insurer: { type: string, description: "Por ahora solo IOMA" }
+            plan: { type: string, nullable: true }
+        practice:
+          type: object
+          required: [id, code]
+          properties:
+            id:
+              type: string
+              description: >
+                CLAVE DE RESOLUCIÓN: debe tener equivalencia APROBADA en el
+                Robot con especialidad asignada. De acá se deriva la práctica
+                KLINICOS, la especialidad y el profesional.
+            code: { type: string, description: "Código nomenclador (informativo/auditoría)" }
+            description: { type: string, nullable: true }
+            catalog: { type: string, nullable: true }
+            quantity: { type: integer, default: 1 }
+        site:
+          type: object
+          nullable: true
+          properties:
+            id: { type: string, nullable: true }
+            name: { type: string, nullable: true }
+        scheduled_at:
+          type: string
+          description: ISO 8601; debe ser una atención del día de HOY (hora argentina)
+        diagnosis:
+          type: object
+          required: [code]
+          properties:
+            code: { type: string, description: "CIE-10" }
+            description: { type: string, nullable: true }
+        token:
+          type: string
+          description: Token IOMA del paciente (4 a 40 caracteres); nunca se guarda en texto plano
+    ConsultaProcesoRespuesta:
+      type: object
+      required: [request_id, consultation_id, status, attempt_number]
+      properties:
+        request_id: { type: string }
+        consultation_id: { type: string }
+        status:
+          type: string
+          description: |
+            - PROCESSING: en curso; hacer polling del GET.
+            - TOKEN_ACCEPTED: token aplicado; caso cerrado.
+            - TOKEN_DENIED: denegado por IOMA; caso cerrado.
+            - DATA_REQUIRED: completar los campos de missing_fields y re-enviar el MISMO request_id.
+            - MAPPING_REQUIRED: falta equivalencia/regla aprobada (ver mapping_required); se corrige en el panel del Robot y se reintenta el MISMO request_id, pedido idéntico.
+            - MANUAL_REVIEW: en revisión técnica del Robot; esperar resolución.
+            - TOKEN_REENTRY_REQUIRED: el token guardado venció; re-enviar el POST con el MISMO request_id y un token NUEVO.
+            - TECHNICAL_ERROR: error técnico; reintentar el MISMO request_id (pedido idéntico).
+          enum: [PROCESSING, TOKEN_ACCEPTED, TOKEN_DENIED, DATA_REQUIRED, MAPPING_REQUIRED, MANUAL_REVIEW, TOKEN_REENTRY_REQUIRED, TECHNICAL_ERROR]
+        attempt_number: { type: integer, description: "Se incrementa en cada re-ejecución real" }
+        requires_manual_action: { type: boolean }
+        retry_allowed: { type: boolean }
+        missing_fields:
+          type: array
+          description: Rutas exactas con punto (solo en DATA_REQUIRED)
+          items: { type: string }
+        mapping_required:
+          type: array
+          description: Pendientes de equivalencia o regla (solo en MAPPING_REQUIRED)
+          items:
+            $ref: "#/components/schemas/MapeoPendiente"
+        reason_code: { type: string, nullable: true }
+        reason_message:
+          type: string
+          nullable: true
+          description: Para MANUAL_REVIEW siempre es "En revisión técnica" (el detalle queda en el Robot)
+        authorization_number: { type: string, nullable: true }
+        klinicos_reference: { type: string, nullable: true }
+        prestation_created: { type: boolean }
+        queue:
+          nullable: true
+          allOf: [{ $ref: "#/components/schemas/EstadoCola" }]
+        validated_at: { type: string, nullable: true }
+        latency_ms: { type: integer, nullable: true }
+    MapeoPendiente:
+      type: object
+      required: [kind, value, problem]
+      properties:
+        kind:
+          type: string
+          enum: [practice, specialty]
+        value:
+          type: string
+          description: El practice.id o la especialidad derivada
+        problem:
+          type: string
+          description: |
+            - PRACTICE_WITHOUT_EQUIVALENCE: practice.id sin equivalencia cargada.
+            - PRACTICE_EQUIVALENCE_PENDING_APPROVAL: equivalencia cargada pero no aprobada.
+            - PRACTICE_EQUIVALENCE_AMBIGUOUS: más de una equivalencia para el mismo practice.id.
+            - PRACTICE_WITHOUT_SPECIALTY: práctica aprobada sin especialidad asignada.
+            - SPECIALTY_WITHOUT_APPROVED_PROFESSIONAL: especialidad sin regla aprobada/activa o sin profesionales.
+            - SPECIALTY_RULE_AMBIGUOUS: dos reglas igual de específicas.
+          enum:
+            - PRACTICE_WITHOUT_EQUIVALENCE
+            - PRACTICE_EQUIVALENCE_PENDING_APPROVAL
+            - PRACTICE_EQUIVALENCE_AMBIGUOUS
+            - PRACTICE_WITHOUT_SPECIALTY
+            - SPECIALTY_WITHOUT_APPROVED_PROFESSIONAL
+            - SPECIALTY_RULE_AMBIGUOUS
+    EstadoCola:
+      type: object
+      properties:
+        pending_operations: { type: integer }
+        approx_position: { type: integer, nullable: true }
+        estimated_wait_seconds: { type: integer, nullable: true }
+        klinicos_session_available: { type: boolean }
+    SaludConsultas:
+      type: object
+      properties:
+        enabled: { type: boolean }
+        sandbox: { type: boolean, description: "true = entorno de simulación; nunca opera KLINICOS real" }
+        queue: { $ref: "#/components/schemas/EstadoCola" }
+        totals_by_status:
+          type: object
+          additionalProperties: { type: integer }
+        timestamp: { type: string }

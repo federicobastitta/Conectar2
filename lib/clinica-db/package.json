@@ -1,0 +1,64 @@
+{
+  "name": "@workspace/clinica-db",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./connection": {
+      "import": "./dist/connection.js",
+      "types": "./dist/connection.d.ts"
+    },
+    "./migrations": {
+      "import": "./dist/migrations/runner.js",
+      "types": "./dist/migrations/runner.d.ts"
+    },
+    "./s3": {
+      "import": "./dist/s3/client.js",
+      "types": "./dist/s3/client.d.ts"
+    },
+    "./importacion/alephoo": {
+      "import": "./dist/importacion/alephoo/index.js",
+      "types": "./dist/importacion/alephoo/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "migrate": "node --import tsx/esm src/migrations/cli.ts",
+    "test": "vitest run --config vitest.config.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "catalog:",
+    "pg": "^8.22.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/pg": "^8.20.0",
+    "drizzle-zod": "^0.8.3",
+    "tsx": "catalog:",
+    "vitest": "^3.2.7"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@aws-sdk/s3-request-presigner": "^3.0.0",
+    "exceljs": "^4.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@aws-sdk/client-s3": {
+      "optional": true
+    },
+    "@aws-sdk/s3-request-presigner": {
+      "optional": true
+    },
+    "exceljs": {
+      "optional": true
+    }
+  }
+}

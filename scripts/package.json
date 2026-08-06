@@ -1,0 +1,28 @@
+{
+  "name": "@workspace/scripts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "hello": "tsx ./src/hello.ts",
+    "seed": "tsx ./src/seed.ts",
+    "import-autopilot": "tsx ./src/import-autopilot.ts",
+    "importar-agendas": "tsx ./src/importar-agendas.ts",
+    "importar-turnos-detallados": "tsx ./src/importar-turnos-detallados.ts",
+    "cargar-pacientes-turnos": "tsx ./src/cargar-pacientes-turnos.ts",
+    "cargar-turnos-dia": "tsx ./src/cargar-turnos-dia.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@workspace/clinica-db": "workspace:*",
+    "@workspace/db": "workspace:*",
+    "drizzle-orm": "catalog:",
+    "pg": "^8.22.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/pg": "^8.20.0",
+    "tsx": "catalog:"
+  }
+}

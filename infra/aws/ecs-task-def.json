@@ -1,0 +1,58 @@
+{
+  "family": "alephoo-worker",
+  "taskRoleArn": "arn:aws:iam::ACCOUNT_ID:role/conectar-alephoo-worker-task",
+  "executionRoleArn": "arn:aws:iam::ACCOUNT_ID:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "containerDefinitions": [
+    {
+      "name": "alephoo-worker",
+      "image": "ACCOUNT_ID.dkr.ecr.sa-east-1.amazonaws.com/conectar/alephoo-worker:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3099,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        { "name": "NODE_ENV",         "value": "production" },
+        { "name": "CLINICA_S3_BUCKET", "value": "conectar-documentos-clinicos-prod" },
+        { "name": "CLINICA_S3_REGION", "value": "sa-east-1" },
+        { "name": "CLINICA_S3_PREFIX", "value": "clinica-prod" },
+        { "name": "ALEPHOO_S3_RAW_PREFIX",          "value": "alephoo/raw" },
+        { "name": "ALEPHOO_S3_STAGING_PREFIX",       "value": "alephoo/staging" },
+        { "name": "ALEPHOO_S3_RECHAZADOS_PREFIX",    "value": "alephoo/rechazados" },
+        { "name": "ALEPHOO_S3_CONCILIACION_PREFIX",  "value": "alephoo/conciliacion" },
+        { "name": "ALEPHOO_INICIADO_POR",            "value": "ecs-scheduled-task" }
+      ],
+      "secrets": [
+        {
+          "name": "CLINICA_DB_URL",
+          "valueFrom": "arn:aws:secretsmanager:sa-east-1:ACCOUNT_ID:secret:conectar/prod/clinica-db-url"
+        },
+        {
+          "name": "CLINICA_DB_SSL_CA",
+          "valueFrom": "arn:aws:secretsmanager:sa-east-1:ACCOUNT_ID:secret:conectar/prod/rds-ca-cert"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/conectar/alephoo-worker",
+          "awslogs-region": "sa-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "healthCheck": {
+        "command": ["CMD-SHELL", "wget -qO- http://localhost:3099/health || exit 1"],
+        "interval": 15,
+        "timeout": 5,
+        "retries": 2,
+        "startPeriod": 30
+      }
+    }
+  ]
+}

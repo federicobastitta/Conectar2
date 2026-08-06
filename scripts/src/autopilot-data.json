@@ -1,0 +1,3395 @@
+{
+  "generatedAt": "2026-07-12T02:20:00.639Z",
+  "tenant": "a6b0de07-031d-420c-a3e5-0ef0cb9c7267",
+  "sedes": [
+    {
+      "institucionId": 250,
+      "nombre": "Cardiologia- Berazategui"
+    },
+    {
+      "institucionId": 240,
+      "nombre": "Central- Berazategui"
+    },
+    {
+      "institucionId": 249,
+      "nombre": "Centro de la Mujer- Berazategui"
+    },
+    {
+      "institucionId": 246,
+      "nombre": "Sede Lomas de Zamora"
+    },
+    {
+      "institucionId": 247,
+      "nombre": "centro oftalmológico Berazategui"
+    }
+  ],
+  "especialidades": [
+    {
+      "idAutopilot": 135,
+      "nombre": "Cardiología"
+    },
+    {
+      "idAutopilot": 264,
+      "nombre": "CARDIOLOGIA INFANTIL"
+    },
+    {
+      "idAutopilot": 103,
+      "nombre": "Cirugía"
+    },
+    {
+      "idAutopilot": 216,
+      "nombre": "Dermatologia"
+    },
+    {
+      "idAutopilot": 265,
+      "nombre": "ECOCARDIOGRAMA INFANTIL"
+    },
+    {
+      "idAutopilot": 254,
+      "nombre": "Ecocardiograma y doppler cardiaco"
+    },
+    {
+      "idAutopilot": 153,
+      "nombre": "Ecografía"
+    },
+    {
+      "idAutopilot": 259,
+      "nombre": "Electroencefalograma"
+    },
+    {
+      "idAutopilot": 273,
+      "nombre": "Endocrinologia"
+    },
+    {
+      "idAutopilot": 271,
+      "nombre": "Ergometrias"
+    },
+    {
+      "idAutopilot": 269,
+      "nombre": "ESPECIALISTA DE COLUMNA"
+    },
+    {
+      "idAutopilot": 266,
+      "nombre": "GASTROENTEROLOGIA"
+    },
+    {
+      "idAutopilot": 240,
+      "nombre": "Ginecología"
+    },
+    {
+      "idAutopilot": 231,
+      "nombre": "HOLTER 12 CANALES"
+    },
+    {
+      "idAutopilot": 159,
+      "nombre": "Mamografía"
+    },
+    {
+      "idAutopilot": 211,
+      "nombre": "NEUMONOLOGIA"
+    },
+    {
+      "idAutopilot": 134,
+      "nombre": "Neurología"
+    },
+    {
+      "idAutopilot": 36,
+      "nombre": "Odontología"
+    },
+    {
+      "idAutopilot": 136,
+      "nombre": "Oftalmología"
+    },
+    {
+      "idAutopilot": 263,
+      "nombre": "PEDIATRIA PROGRAMADA"
+    },
+    {
+      "idAutopilot": 232,
+      "nombre": "Presurometria 24 hs"
+    },
+    {
+      "idAutopilot": 241,
+      "nombre": "Reumatologia"
+    },
+    {
+      "idAutopilot": 166,
+      "nombre": "Traumatología"
+    },
+    {
+      "idAutopilot": 267,
+      "nombre": "UROLOGIA"
+    },
+    {
+      "idAutopilot": 246,
+      "nombre": "Videollamada- clinica medica"
+    }
+  ],
+  "profesionales": [
+    {
+      "key": "pid:1418",
+      "personalId": 1418,
+      "nombre": "Ruben Nahuel (Calle 15 N° 4676)",
+      "apellido": "Alvarez Lopez",
+      "especialidadIdAutopilot": 135
+    },
+    {
+      "key": "pid:1528",
+      "personalId": 1528,
+      "nombre": "Patricio Xavier",
+      "apellido": "Orellana Quezada",
+      "especialidadIdAutopilot": 135
+    },
+    {
+      "key": "pid:1378",
+      "personalId": 1378,
+      "nombre": "Garcia Demera",
+      "apellido": "Brian Alfonso",
+      "especialidadIdAutopilot": 135
+    },
+    {
+      "key": "pid:1450",
+      "personalId": 1450,
+      "nombre": "Veronica Mariuxi",
+      "apellido": "Armijos Tocto",
+      "especialidadIdAutopilot": 135
+    },
+    {
+      "key": "pid:1539",
+      "personalId": 1539,
+      "nombre": "Paula",
+      "apellido": "Ribeiro Silva",
+      "especialidadIdAutopilot": 135
+    },
+    {
+      "key": "pid:1408",
+      "personalId": 1408,
+      "nombre": "Alison Giselle",
+      "apellido": "Rivera Gonzales",
+      "especialidadIdAutopilot": 135
+    },
+    {
+      "key": "nm:nestor alberto jerez",
+      "personalId": null,
+      "nombre": "Nestor Alberto Jerez",
+      "apellido": null,
+      "especialidadIdAutopilot": 264
+    },
+    {
+      "key": "pid:1281",
+      "personalId": 1281,
+      "nombre": "Diego Santiago",
+      "apellido": "Fabiano",
+      "especialidadIdAutopilot": 103
+    },
+    {
+      "key": "pid:1555",
+      "personalId": 1555,
+      "nombre": "Mariano Gustavo",
+      "apellido": "Fredes",
+      "especialidadIdAutopilot": 103
+    },
+    {
+      "key": "pid:1556",
+      "personalId": 1556,
+      "nombre": "Federico Ignacio",
+      "apellido": "Frontera",
+      "especialidadIdAutopilot": 103
+    },
+    {
+      "key": "nm:erica yolima mora aguilar",
+      "personalId": null,
+      "nombre": "Erica Yolima Mora Aguilar",
+      "apellido": null,
+      "especialidadIdAutopilot": 216
+    },
+    {
+      "key": "nm:antonieta boianelli",
+      "personalId": null,
+      "nombre": "Antonieta Boianelli",
+      "apellido": null,
+      "especialidadIdAutopilot": 216
+    },
+    {
+      "key": "nm:jorge nonnis",
+      "personalId": null,
+      "nombre": "Jorge Nonnis",
+      "apellido": null,
+      "especialidadIdAutopilot": 254
+    },
+    {
+      "key": "nm:franco caceres",
+      "personalId": null,
+      "nombre": "Franco Caceres",
+      "apellido": null,
+      "especialidadIdAutopilot": 254
+    },
+    {
+      "key": "nm:monica castillo",
+      "personalId": null,
+      "nombre": "Monica Castillo",
+      "apellido": null,
+      "especialidadIdAutopilot": 254
+    },
+    {
+      "key": "pid:1358",
+      "personalId": 1358,
+      "nombre": "Antony Enrique",
+      "apellido": "Ojeda Davila",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1489",
+      "personalId": 1489,
+      "nombre": "Jorge Enrique",
+      "apellido": "Bonilla Franco",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1481",
+      "personalId": 1481,
+      "nombre": "Emilio Jose",
+      "apellido": "Lira Villarroel",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1361",
+      "personalId": 1361,
+      "nombre": "Yeisson Humberto",
+      "apellido": "Murcia Leal",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1197",
+      "personalId": 1197,
+      "nombre": "Varela",
+      "apellido": "Ana",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1201",
+      "personalId": 1201,
+      "nombre": "Yadry",
+      "apellido": "Yacub",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1390",
+      "personalId": 1390,
+      "nombre": "Prieto",
+      "apellido": "Giovanna",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1435",
+      "personalId": 1435,
+      "nombre": "Macuace",
+      "apellido": "David",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1565",
+      "personalId": 1565,
+      "nombre": "Alejandra Lisath",
+      "apellido": "Guerrero Sendoya",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1199",
+      "personalId": 1199,
+      "nombre": "Carlos",
+      "apellido": "Muñoz",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1510",
+      "personalId": 1510,
+      "nombre": "Esau Vicente",
+      "apellido": "Sani Alcibar",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1436",
+      "personalId": 1436,
+      "nombre": "Adrian Alexander",
+      "apellido": "Cedeño Carpio",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1525",
+      "personalId": 1525,
+      "nombre": "Natalia Soledad",
+      "apellido": "Fernandez",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1517",
+      "personalId": 1517,
+      "nombre": "Carlos Jose",
+      "apellido": "Nieto Gomez",
+      "especialidadIdAutopilot": 153
+    },
+    {
+      "key": "pid:1276",
+      "personalId": 1276,
+      "nombre": "E.e.g",
+      "apellido": "Electroencefalogramas",
+      "especialidadIdAutopilot": 259
+    },
+    {
+      "key": "pid:1244",
+      "personalId": 1244,
+      "nombre": "Berazategui Calle 15 N° 4676",
+      "apellido": "Ergometria",
+      "especialidadIdAutopilot": 271
+    },
+    {
+      "key": "pid:1429",
+      "personalId": 1429,
+      "nombre": "Lomas",
+      "apellido": "Ergometrias",
+      "especialidadIdAutopilot": 271
+    },
+    {
+      "key": "pid:1241",
+      "personalId": 1241,
+      "nombre": "Bittar",
+      "apellido": "Carlos",
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "pid:1384",
+      "personalId": 1384,
+      "nombre": "Diosa Patricia",
+      "apellido": "Cabarcas Palma",
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "pid:1242",
+      "personalId": 1242,
+      "nombre": "Gustavo",
+      "apellido": "Gereme",
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "pid:1243",
+      "personalId": 1243,
+      "nombre": "Dron",
+      "apellido": "Fernando",
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "pid:1465",
+      "personalId": 1465,
+      "nombre": "Steven Andres",
+      "apellido": "Teran Montenegro",
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "pid:1462",
+      "personalId": 1462,
+      "nombre": "Martin Amadeo",
+      "apellido": "Bersuker",
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "pid:1454",
+      "personalId": 1454,
+      "nombre": "Alejandro Daniel",
+      "apellido": "Morales",
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "pid:1196",
+      "personalId": 1196,
+      "nombre": "Fernando",
+      "apellido": "Frette",
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "nm:maria nelida guerini",
+      "personalId": null,
+      "nombre": "Maria Nelida Guerini",
+      "apellido": null,
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "nm:diosa patricia cabarcas palma",
+      "personalId": null,
+      "nombre": "Diosa Patricia Cabarcas Palma",
+      "apellido": null,
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "nm:gabriela beatriz melis",
+      "personalId": null,
+      "nombre": "Gabriela Beatriz Melis",
+      "apellido": null,
+      "especialidadIdAutopilot": 240
+    },
+    {
+      "key": "nm:lomas holter",
+      "personalId": null,
+      "nombre": "Lomas Holter",
+      "apellido": null,
+      "especialidadIdAutopilot": 231
+    },
+    {
+      "key": "nm:calle 15 n° 4676 holter",
+      "personalId": null,
+      "nombre": "Calle 15 N° 4676 Holter",
+      "apellido": null,
+      "especialidadIdAutopilot": 231
+    },
+    {
+      "key": "pid:1247",
+      "personalId": 1247,
+      "nombre": "Mamografia",
+      "apellido": "Mamografia Bilateral",
+      "especialidadIdAutopilot": 159
+    },
+    {
+      "key": "nm:eugenia gisela bertino",
+      "personalId": null,
+      "nombre": "Eugenia Gisela Bertino",
+      "apellido": null,
+      "especialidadIdAutopilot": 211
+    },
+    {
+      "key": "nm:julio figueroa",
+      "personalId": null,
+      "nombre": "Julio Figueroa",
+      "apellido": null,
+      "especialidadIdAutopilot": 211
+    },
+    {
+      "key": "nm:americo delgado vargas",
+      "personalId": null,
+      "nombre": "Americo Delgado Vargas",
+      "apellido": null,
+      "especialidadIdAutopilot": 134
+    },
+    {
+      "key": "pid:1312",
+      "personalId": 1312,
+      "nombre": "Aldana",
+      "apellido": "Cepero",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1203",
+      "personalId": 1203,
+      "nombre": "Noelia",
+      "apellido": "Varela",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1369",
+      "personalId": 1369,
+      "nombre": "Laura",
+      "apellido": "Amarilla (Calle 147)",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1514",
+      "personalId": 1514,
+      "nombre": "Alexis (Los Dias Miercoles Atiende Calle 147)",
+      "apellido": "Agnoli",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1399",
+      "personalId": 1399,
+      "nombre": "Rocio Belen (Calle 147)",
+      "apellido": "Gallo Mendoza",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1209",
+      "personalId": 1209,
+      "nombre": "Paola",
+      "apellido": "Sosa",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1393",
+      "personalId": 1393,
+      "nombre": "Belen (Calle 147)",
+      "apellido": "Collazo",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1205",
+      "personalId": 1205,
+      "nombre": "Cecilia",
+      "apellido": "Levy",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "nm:eliana natali salinas",
+      "personalId": null,
+      "nombre": "Eliana Natali Salinas",
+      "apellido": null,
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1377",
+      "personalId": 1377,
+      "nombre": "Geraldine",
+      "apellido": "Bodeman",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1382",
+      "personalId": 1382,
+      "nombre": "Dayla Mitchell (Calle 147)",
+      "apellido": "Ramos Ramirez",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1417",
+      "personalId": 1417,
+      "nombre": "Eliana (Calle 147)",
+      "apellido": "Kesler",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "nm:carolina trombetta",
+      "personalId": null,
+      "nombre": "Carolina Trombetta",
+      "apellido": null,
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1502",
+      "personalId": 1502,
+      "nombre": "Veronica",
+      "apellido": "Garate",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1370",
+      "personalId": 1370,
+      "nombre": "Ludmila",
+      "apellido": "Narvaez (Calle 147)",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1557",
+      "personalId": 1557,
+      "nombre": "Marcela",
+      "apellido": "Schwindt",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1558",
+      "personalId": 1558,
+      "nombre": "Maiten",
+      "apellido": "Cañete",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1550",
+      "personalId": 1550,
+      "nombre": "Malena",
+      "apellido": "Acosta (Atiende En La Calle 147)",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1211",
+      "personalId": 1211,
+      "nombre": "Jacqueline (Calle 147)",
+      "apellido": "Mamani",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1546",
+      "personalId": 1546,
+      "nombre": "Camila",
+      "apellido": "Lezana",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1295",
+      "personalId": 1295,
+      "nombre": "Evelin",
+      "apellido": "Dantas",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1488",
+      "personalId": 1488,
+      "nombre": "Regina",
+      "apellido": "Zugnoni",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1371",
+      "personalId": 1371,
+      "nombre": "De La Serna",
+      "apellido": "Maria (Calle 147)",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1530",
+      "personalId": 1530,
+      "nombre": "Cecilia",
+      "apellido": "Cari (Atiende En La Calle 147)",
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "nm:franco rossitto",
+      "personalId": null,
+      "nombre": "Franco Rossitto",
+      "apellido": null,
+      "especialidadIdAutopilot": 36
+    },
+    {
+      "key": "pid:1252",
+      "personalId": 1252,
+      "nombre": "Camila",
+      "apellido": "Bertolo",
+      "especialidadIdAutopilot": 136
+    },
+    {
+      "key": "pid:1433",
+      "personalId": 1433,
+      "nombre": "Judith",
+      "apellido": "Maciel",
+      "especialidadIdAutopilot": 136
+    },
+    {
+      "key": "nm:adriana zurita",
+      "personalId": null,
+      "nombre": "Adriana Zurita",
+      "apellido": null,
+      "especialidadIdAutopilot": 136
+    },
+    {
+      "key": "nm:cintia solange pineda",
+      "personalId": null,
+      "nombre": "Cintia Solange Pineda",
+      "apellido": null,
+      "especialidadIdAutopilot": 136
+    },
+    {
+      "key": "nm:judith maciel",
+      "personalId": null,
+      "nombre": "Judith Maciel",
+      "apellido": null,
+      "especialidadIdAutopilot": 136
+    },
+    {
+      "key": "nm:juan pablo salinas",
+      "personalId": null,
+      "nombre": "Juan Pablo Salinas",
+      "apellido": null,
+      "especialidadIdAutopilot": 136
+    },
+    {
+      "key": "nm:diego diaz",
+      "personalId": null,
+      "nombre": "Diego Diaz",
+      "apellido": null,
+      "especialidadIdAutopilot": 136
+    },
+    {
+      "key": "pid:1261",
+      "personalId": 1261,
+      "nombre": "Cesar",
+      "apellido": "Ullon",
+      "especialidadIdAutopilot": 263
+    },
+    {
+      "key": "pid:1554",
+      "personalId": 1554,
+      "nombre": "Katherine",
+      "apellido": "Montes Barros",
+      "especialidadIdAutopilot": 263
+    },
+    {
+      "key": "nm:cesar ullon",
+      "personalId": null,
+      "nombre": "Cesar Ullon",
+      "apellido": null,
+      "especialidadIdAutopilot": 263
+    },
+    {
+      "key": "pid:1412",
+      "personalId": 1412,
+      "nombre": "Mapa Lomas De Zamora",
+      "apellido": "Presurometria",
+      "especialidadIdAutopilot": 232
+    },
+    {
+      "key": "pid:1240",
+      "personalId": 1240,
+      "nombre": "Calle 15 N° 4676",
+      "apellido": "Presurometria- Mapa",
+      "especialidadIdAutopilot": 232
+    },
+    {
+      "key": "pid:1504",
+      "personalId": 1504,
+      "nombre": "Maria Alejandra",
+      "apellido": "Donofrio Pasaporte",
+      "especialidadIdAutopilot": 241
+    },
+    {
+      "key": "pid:1270",
+      "personalId": 1270,
+      "nombre": "Seminario",
+      "apellido": "Torres",
+      "especialidadIdAutopilot": 241
+    },
+    {
+      "key": "nm:maria alejandra donofrio pasaporte",
+      "personalId": null,
+      "nombre": "Maria Alejandra Donofrio Pasaporte",
+      "apellido": null,
+      "especialidadIdAutopilot": 241
+    },
+    {
+      "key": "nm:seminario torres",
+      "personalId": null,
+      "nombre": "Seminario Torres",
+      "apellido": null,
+      "especialidadIdAutopilot": 241
+    },
+    {
+      "key": "nm:oscar gardeñez",
+      "personalId": null,
+      "nombre": "Oscar Gardeñez",
+      "apellido": null,
+      "especialidadIdAutopilot": 241
+    },
+    {
+      "key": "pid:1440",
+      "personalId": 1440,
+      "nombre": "Guillermo",
+      "apellido": "Villagran",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1507",
+      "personalId": 1507,
+      "nombre": "Omar Alonso",
+      "apellido": "Brito Santiago",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1512",
+      "personalId": 1512,
+      "nombre": "Napoleon Alberto",
+      "apellido": "Coello Gomez",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1185",
+      "personalId": 1185,
+      "nombre": "Jhonny",
+      "apellido": "Palma",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1189",
+      "personalId": 1189,
+      "nombre": "Leonardo",
+      "apellido": "Soto",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1406",
+      "personalId": 1406,
+      "nombre": "Natali Gardenia",
+      "apellido": "Ortega Romero",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1397",
+      "personalId": 1397,
+      "nombre": "Helen",
+      "apellido": "Ureña Melgarejo",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1428",
+      "personalId": 1428,
+      "nombre": "Fernando Daniel",
+      "apellido": "Romero",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1552",
+      "personalId": 1552,
+      "nombre": "Hector Jaime",
+      "apellido": "Vega Araujo",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1468",
+      "personalId": 1468,
+      "nombre": "Milton Remberto",
+      "apellido": "Veizaga Goytia",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1184",
+      "personalId": 1184,
+      "nombre": "Ignacio",
+      "apellido": "Violini",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1318",
+      "personalId": 1318,
+      "nombre": "Geiner Manuel",
+      "apellido": "Gomez Gutierrez",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1267",
+      "personalId": 1267,
+      "nombre": "Padilla",
+      "apellido": "Martin",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1475",
+      "personalId": 1475,
+      "nombre": "Romero",
+      "apellido": "Freddy",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1277",
+      "personalId": 1277,
+      "nombre": "Leon",
+      "apellido": "Rocha",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1519",
+      "personalId": 1519,
+      "nombre": "NICOLAS",
+      "apellido": "COLOMBO",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1356",
+      "personalId": 1356,
+      "nombre": "Alejandro Javier",
+      "apellido": "Lasko",
+      "especialidadIdAutopilot": 166
+    },
+    {
+      "key": "pid:1159",
+      "personalId": 1159,
+      "nombre": "Ignacio Saez De",
+      "apellido": "Guinoa",
+      "especialidadIdAutopilot": 246
+    }
+  ],
+  "turneras": [
+    {
+      "agendaId": 4286,
+      "profKey": "pid:1418",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "2",
+      "horaInicio": "09:00",
+      "horaFin": "15:40",
+      "dur": 10
+    },
+    {
+      "agendaId": 5419,
+      "profKey": "pid:1528",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "2",
+      "horaInicio": "13:40",
+      "horaFin": "16:40",
+      "dur": 10
+    },
+    {
+      "agendaId": 3968,
+      "profKey": "pid:1418",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "3",
+      "horaInicio": "09:00",
+      "horaFin": "15:40",
+      "dur": 10
+    },
+    {
+      "agendaId": 5400,
+      "profKey": "pid:1378",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "4",
+      "horaInicio": "08:30",
+      "horaFin": "13:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4277,
+      "profKey": "pid:1450",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "4",
+      "horaInicio": "09:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5107,
+      "profKey": "pid:1539",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "5",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4457,
+      "profKey": "pid:1408",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "5",
+      "horaInicio": "13:30",
+      "horaFin": "17:06",
+      "dur": 12
+    },
+    {
+      "agendaId": 3967,
+      "profKey": "pid:1418",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "1",
+      "horaInicio": "09:00",
+      "horaFin": "14:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4458,
+      "profKey": "pid:1408",
+      "espId": 135,
+      "institucionId": 250,
+      "dias": "1",
+      "horaInicio": "09:00",
+      "horaFin": "13:33",
+      "dur": 13
+    },
+    {
+      "agendaId": 4485,
+      "profKey": "nm:nestor alberto jerez",
+      "espId": 264,
+      "institucionId": 250,
+      "dias": "1",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "dur": 12
+    },
+    {
+      "agendaId": 2925,
+      "profKey": "pid:1281",
+      "espId": 103,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "15:00",
+      "horaFin": "18:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5265,
+      "profKey": "pid:1555",
+      "espId": 103,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5282,
+      "profKey": "pid:1556",
+      "espId": 103,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "17:00",
+      "horaFin": "20:02",
+      "dur": 7
+    },
+    {
+      "agendaId": 3467,
+      "profKey": "nm:erica yolima mora aguilar",
+      "espId": 216,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "08:00",
+      "horaFin": "12:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3735,
+      "profKey": "nm:erica yolima mora aguilar",
+      "espId": 216,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "13:00",
+      "horaFin": "16:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3301,
+      "profKey": "nm:erica yolima mora aguilar",
+      "espId": 216,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "12:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 3302,
+      "profKey": "nm:erica yolima mora aguilar",
+      "espId": 216,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "14:00",
+      "horaFin": "18:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4382,
+      "profKey": "nm:antonieta boianelli",
+      "espId": 216,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "17:00",
+      "horaFin": "18:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 3277,
+      "profKey": "nm:jorge nonnis",
+      "espId": 254,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "07:30",
+      "horaFin": "12:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4515,
+      "profKey": "nm:franco caceres",
+      "espId": 254,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "14:00",
+      "horaFin": "19:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3293,
+      "profKey": "nm:monica castillo",
+      "espId": 254,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "09:00",
+      "horaFin": "11:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 3697,
+      "profKey": "pid:1358",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4526,
+      "profKey": "pid:1489",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "08:00",
+      "horaFin": "12:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4383,
+      "profKey": "pid:1481",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:00",
+      "horaFin": "19:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3343,
+      "profKey": "pid:1361",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "09:00",
+      "horaFin": "12:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5023,
+      "profKey": "pid:1197",
+      "espId": 153,
+      "institucionId": 249,
+      "dias": "3",
+      "horaInicio": "09:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 2816,
+      "profKey": "pid:1201",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "14:00",
+      "horaFin": "18:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4662,
+      "profKey": "pid:1358",
+      "espId": 153,
+      "institucionId": 249,
+      "dias": "4",
+      "horaInicio": "08:00",
+      "horaFin": "16:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 5147,
+      "profKey": "pid:1390",
+      "espId": 153,
+      "institucionId": 246,
+      "dias": "4",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4581,
+      "profKey": "pid:1481",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:00",
+      "horaFin": "17:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4468,
+      "profKey": "pid:1435",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "08:00",
+      "horaFin": "12:00",
+      "dur": 12
+    },
+    {
+      "agendaId": 5431,
+      "profKey": "pid:1489",
+      "espId": 153,
+      "institucionId": 249,
+      "dias": "5",
+      "horaInicio": "09:00",
+      "horaFin": "17:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4469,
+      "profKey": "pid:1435",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:00",
+      "horaFin": "18:00",
+      "dur": 12
+    },
+    {
+      "agendaId": 5489,
+      "profKey": "pid:1565",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:00",
+      "horaFin": "18:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4491,
+      "profKey": "pid:1435",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "14:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4466,
+      "profKey": "pid:1199",
+      "espId": 153,
+      "institucionId": 249,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "14:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5439,
+      "profKey": "pid:1510",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "09:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4793,
+      "profKey": "pid:1435",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "0",
+      "horaInicio": "12:00",
+      "horaFin": "16:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4856,
+      "profKey": "pid:1436",
+      "espId": 153,
+      "institucionId": 249,
+      "dias": "1",
+      "horaInicio": "09:00",
+      "horaFin": "16:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4937,
+      "profKey": "pid:1525",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:20",
+      "horaFin": "17:40",
+      "dur": 20
+    },
+    {
+      "agendaId": 4603,
+      "profKey": "pid:1199",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "07:30",
+      "horaFin": "15:50",
+      "dur": 10
+    },
+    {
+      "agendaId": 4462,
+      "profKey": "pid:1358",
+      "espId": 153,
+      "institucionId": 249,
+      "dias": "2",
+      "horaInicio": "08:00",
+      "horaFin": "12:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5320,
+      "profKey": "pid:1525",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4463,
+      "profKey": "pid:1358",
+      "espId": 153,
+      "institucionId": 249,
+      "dias": "2",
+      "horaInicio": "13:00",
+      "horaFin": "15:50",
+      "dur": 10
+    },
+    {
+      "agendaId": 4567,
+      "profKey": "pid:1199",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "07:30",
+      "horaFin": "16:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4566,
+      "profKey": "pid:1199",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "07:30",
+      "horaFin": "12:50",
+      "dur": 10
+    },
+    {
+      "agendaId": 4843,
+      "profKey": "pid:1517",
+      "espId": 153,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:30",
+      "horaFin": "15:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 3482,
+      "profKey": "pid:1276",
+      "espId": 259,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "09:00",
+      "horaFin": "14:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4097,
+      "profKey": "pid:1244",
+      "espId": 271,
+      "institucionId": 250,
+      "dias": "1",
+      "horaInicio": "08:00",
+      "horaFin": "16:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4115,
+      "profKey": "pid:1429",
+      "espId": 271,
+      "institucionId": 246,
+      "dias": "1",
+      "horaInicio": "09:00",
+      "horaFin": "16:40",
+      "dur": 20
+    },
+    {
+      "agendaId": 4098,
+      "profKey": "pid:1244",
+      "espId": 271,
+      "institucionId": 250,
+      "dias": "2",
+      "horaInicio": "08:00",
+      "horaFin": "16:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4116,
+      "profKey": "pid:1429",
+      "espId": 271,
+      "institucionId": 246,
+      "dias": "2",
+      "horaInicio": "09:00",
+      "horaFin": "16:40",
+      "dur": 20
+    },
+    {
+      "agendaId": 4099,
+      "profKey": "pid:1244",
+      "espId": 271,
+      "institucionId": 250,
+      "dias": "3",
+      "horaInicio": "08:00",
+      "horaFin": "16:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4117,
+      "profKey": "pid:1429",
+      "espId": 271,
+      "institucionId": 246,
+      "dias": "3",
+      "horaInicio": "09:00",
+      "horaFin": "16:40",
+      "dur": 20
+    },
+    {
+      "agendaId": 4100,
+      "profKey": "pid:1244",
+      "espId": 271,
+      "institucionId": 250,
+      "dias": "4",
+      "horaInicio": "08:00",
+      "horaFin": "16:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4118,
+      "profKey": "pid:1429",
+      "espId": 271,
+      "institucionId": 246,
+      "dias": "4",
+      "horaInicio": "09:00",
+      "horaFin": "16:40",
+      "dur": 20
+    },
+    {
+      "agendaId": 4101,
+      "profKey": "pid:1244",
+      "espId": 271,
+      "institucionId": 250,
+      "dias": "5",
+      "horaInicio": "08:00",
+      "horaFin": "16:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4119,
+      "profKey": "pid:1429",
+      "espId": 271,
+      "institucionId": 246,
+      "dias": "5",
+      "horaInicio": "09:00",
+      "horaFin": "16:40",
+      "dur": 20
+    },
+    {
+      "agendaId": 4102,
+      "profKey": "pid:1244",
+      "espId": 271,
+      "institucionId": 250,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4120,
+      "profKey": "pid:1429",
+      "espId": 271,
+      "institucionId": 246,
+      "dias": "6",
+      "horaInicio": "09:00",
+      "horaFin": "12:40",
+      "dur": 20
+    },
+    {
+      "agendaId": 4070,
+      "profKey": "pid:1241",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 5
+    },
+    {
+      "agendaId": 5490,
+      "profKey": "pid:1384",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "6",
+      "horaInicio": "08:30",
+      "horaFin": "12:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 4034,
+      "profKey": "pid:1242",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "1",
+      "horaInicio": "08:30",
+      "horaFin": "15:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 3953,
+      "profKey": "pid:1243",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "1",
+      "horaInicio": "12:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4849,
+      "profKey": "pid:1241",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "2",
+      "horaInicio": "08:00",
+      "horaFin": "14:15",
+      "dur": 5
+    },
+    {
+      "agendaId": 5388,
+      "profKey": "pid:1465",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "2",
+      "horaInicio": "15:00",
+      "horaFin": "17:06",
+      "dur": 7
+    },
+    {
+      "agendaId": 3955,
+      "profKey": "pid:1242",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "3",
+      "horaInicio": "08:30",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4014,
+      "profKey": "pid:1462",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "3",
+      "horaInicio": "10:00",
+      "horaFin": "14:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5197,
+      "profKey": "pid:1454",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "3",
+      "horaInicio": "14:00",
+      "horaFin": "17:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3951,
+      "profKey": "pid:1454",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "4",
+      "horaInicio": "08:00",
+      "horaFin": "14:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4499,
+      "profKey": "pid:1242",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "4",
+      "horaInicio": "08:30",
+      "horaFin": "13:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3960,
+      "profKey": "pid:1196",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "4",
+      "horaInicio": "13:00",
+      "horaFin": "17:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 3952,
+      "profKey": "pid:1454",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "5",
+      "horaInicio": "08:00",
+      "horaFin": "14:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3959,
+      "profKey": "pid:1196",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "1",
+      "horaInicio": "08:00",
+      "horaFin": "12:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4238,
+      "profKey": "nm:maria nelida guerini",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "2",
+      "horaInicio": "08:30",
+      "horaFin": "12:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4085,
+      "profKey": "nm:diosa patricia cabarcas palma",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "6",
+      "horaInicio": "08:30",
+      "horaFin": "13:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5195,
+      "profKey": "nm:gabriela beatriz melis",
+      "espId": 240,
+      "institucionId": 249,
+      "dias": "5",
+      "horaInicio": "15:00",
+      "horaFin": "17:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 3679,
+      "profKey": "nm:lomas holter",
+      "espId": 231,
+      "institucionId": 246,
+      "dias": "2",
+      "horaInicio": "12:00",
+      "horaFin": "12:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 3680,
+      "profKey": "nm:lomas holter",
+      "espId": 231,
+      "institucionId": 246,
+      "dias": "3",
+      "horaInicio": "12:00",
+      "horaFin": "12:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 3681,
+      "profKey": "nm:lomas holter",
+      "espId": 231,
+      "institucionId": 246,
+      "dias": "4",
+      "horaInicio": "12:00",
+      "horaFin": "12:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 3682,
+      "profKey": "nm:lomas holter",
+      "espId": 231,
+      "institucionId": 246,
+      "dias": "5",
+      "horaInicio": "12:00",
+      "horaFin": "12:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 3678,
+      "profKey": "nm:lomas holter",
+      "espId": 231,
+      "institucionId": 246,
+      "dias": "1",
+      "horaInicio": "12:00",
+      "horaFin": "12:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 2988,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "14:00",
+      "horaFin": "14:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 2748,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "11:45",
+      "horaFin": "12:05",
+      "dur": 5
+    },
+    {
+      "agendaId": 2989,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "14:00",
+      "horaFin": "14:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 2749,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "11:45",
+      "horaFin": "12:05",
+      "dur": 5
+    },
+    {
+      "agendaId": 2990,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "14:00",
+      "horaFin": "14:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 4823,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "11:45",
+      "horaFin": "12:05",
+      "dur": 5
+    },
+    {
+      "agendaId": 2991,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "14:00",
+      "horaFin": "14:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 2992,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "10:00",
+      "horaFin": "10:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 2751,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "10:45",
+      "horaFin": "11:05",
+      "dur": 5
+    },
+    {
+      "agendaId": 2752,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "0",
+      "horaInicio": "14:00",
+      "horaFin": "14:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 2746,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "11:45",
+      "horaFin": "12:05",
+      "dur": 5
+    },
+    {
+      "agendaId": 2987,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "14:00",
+      "horaFin": "14:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 2747,
+      "profKey": "nm:calle 15 n° 4676 holter",
+      "espId": 231,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "11:45",
+      "horaFin": "12:05",
+      "dur": 5
+    },
+    {
+      "agendaId": 4045,
+      "profKey": "pid:1247",
+      "espId": 159,
+      "institucionId": 249,
+      "dias": "1",
+      "horaInicio": "09:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4046,
+      "profKey": "pid:1247",
+      "espId": 159,
+      "institucionId": 249,
+      "dias": "2",
+      "horaInicio": "09:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4047,
+      "profKey": "pid:1247",
+      "espId": 159,
+      "institucionId": 249,
+      "dias": "3",
+      "horaInicio": "09:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4048,
+      "profKey": "pid:1247",
+      "espId": 159,
+      "institucionId": 249,
+      "dias": "4",
+      "horaInicio": "09:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4049,
+      "profKey": "pid:1247",
+      "espId": 159,
+      "institucionId": 249,
+      "dias": "5",
+      "horaInicio": "09:00",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4057,
+      "profKey": "pid:1247",
+      "espId": 159,
+      "institucionId": 249,
+      "dias": "6",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4931,
+      "profKey": "nm:eugenia gisela bertino",
+      "espId": 211,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "14:00",
+      "horaFin": "19:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4586,
+      "profKey": "nm:julio figueroa",
+      "espId": 211,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "08:00",
+      "horaFin": "12:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4717,
+      "profKey": "nm:julio figueroa",
+      "espId": 211,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:00",
+      "horaFin": "18:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3148,
+      "profKey": "nm:eugenia gisela bertino",
+      "espId": 211,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "15:00",
+      "horaFin": "19:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 2902,
+      "profKey": "nm:americo delgado vargas",
+      "espId": 134,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "09:30",
+      "horaFin": "12:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5198,
+      "profKey": "nm:americo delgado vargas",
+      "espId": 134,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "15:00",
+      "horaFin": "18:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4666,
+      "profKey": "pid:1312",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "09:00",
+      "horaFin": "12:30",
+      "dur": 30
+    },
+    {
+      "agendaId": 2848,
+      "profKey": "pid:1203",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 4674,
+      "profKey": "pid:1369",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "07:00",
+      "horaFin": "09:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 5390,
+      "profKey": "pid:1514",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 5003,
+      "profKey": "pid:1399",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4675,
+      "profKey": "pid:1369",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 3183,
+      "profKey": "pid:1209",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4695,
+      "profKey": "pid:1393",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:50",
+      "horaFin": "18:50",
+      "dur": 20
+    },
+    {
+      "agendaId": 2914,
+      "profKey": "pid:1205",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 4676,
+      "profKey": "pid:1369",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4765,
+      "profKey": "nm:eliana natali salinas",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "07:00",
+      "horaFin": "12:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4696,
+      "profKey": "pid:1393",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4712,
+      "profKey": "pid:1377",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "08:20",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 3184,
+      "profKey": "pid:1209",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4677,
+      "profKey": "pid:1369",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:30",
+      "horaFin": "19:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 4938,
+      "profKey": "nm:eliana natali salinas",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:30",
+      "horaFin": "18:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 4713,
+      "profKey": "pid:1377",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:30",
+      "horaFin": "19:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 4703,
+      "profKey": "pid:1382",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:30",
+      "horaFin": "18:50",
+      "dur": 20
+    },
+    {
+      "agendaId": 4687,
+      "profKey": "pid:1399",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:30",
+      "horaFin": "19:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 4692,
+      "profKey": "pid:1417",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:30",
+      "horaFin": "19:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 3000,
+      "profKey": "pid:1205",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 4678,
+      "profKey": "pid:1369",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4714,
+      "profKey": "pid:1377",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4688,
+      "profKey": "pid:1399",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4704,
+      "profKey": "pid:1382",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:30",
+      "horaFin": "18:50",
+      "dur": 20
+    },
+    {
+      "agendaId": 5311,
+      "profKey": "nm:carolina trombetta",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:30",
+      "horaFin": "19:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 4723,
+      "profKey": "pid:1502",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:30",
+      "horaFin": "19:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 4724,
+      "profKey": "pid:1370",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "13:40",
+      "dur": 20
+    },
+    {
+      "agendaId": 4701,
+      "profKey": "nm:carolina trombetta",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "14:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 5323,
+      "profKey": "pid:1557",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "14:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 5333,
+      "profKey": "pid:1558",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:00",
+      "horaFin": "14:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 5240,
+      "profKey": "pid:1550",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:30",
+      "horaFin": "13:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 5334,
+      "profKey": "pid:1558",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "14:30",
+      "horaFin": "19:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 5324,
+      "profKey": "pid:1557",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "15:00",
+      "horaFin": "19:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 5241,
+      "profKey": "pid:1211",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4665,
+      "profKey": "pid:1312",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "07:00",
+      "horaFin": "09:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 5312,
+      "profKey": "pid:1369",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4722,
+      "profKey": "pid:1502",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 5210,
+      "profKey": "pid:1546",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4710,
+      "profKey": "pid:1377",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4683,
+      "profKey": "pid:1399",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4684,
+      "profKey": "pid:1399",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "10:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 2847,
+      "profKey": "pid:1203",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:30",
+      "horaFin": "19:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 3181,
+      "profKey": "pid:1209",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 4671,
+      "profKey": "nm:eliana natali salinas",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:30",
+      "horaFin": "19:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 4711,
+      "profKey": "pid:1377",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:30",
+      "horaFin": "16:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 4685,
+      "profKey": "pid:1399",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:30",
+      "horaFin": "19:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 5372,
+      "profKey": "pid:1546",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:30",
+      "horaFin": "18:45",
+      "dur": 15
+    },
+    {
+      "agendaId": 5459,
+      "profKey": "pid:1557",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 4741,
+      "profKey": "pid:1295",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "07:00",
+      "horaFin": "19:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 5391,
+      "profKey": "pid:1514",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "07:00",
+      "horaFin": "09:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 4686,
+      "profKey": "pid:1399",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 5373,
+      "profKey": "pid:1488",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "08:00",
+      "horaFin": "13:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 5369,
+      "profKey": "pid:1514",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 3182,
+      "profKey": "pid:1209",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 5242,
+      "profKey": "pid:1211",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "13:30",
+      "horaFin": "19:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4697,
+      "profKey": "pid:1370",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 4702,
+      "profKey": "pid:1382",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "13:30",
+      "horaFin": "18:50",
+      "dur": 20
+    },
+    {
+      "agendaId": 4757,
+      "profKey": "pid:1488",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 2913,
+      "profKey": "pid:1205",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 4705,
+      "profKey": "pid:1371",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 2849,
+      "profKey": "pid:1203",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:30",
+      "horaFin": "19:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 4891,
+      "profKey": "pid:1382",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:30",
+      "horaFin": "18:50",
+      "dur": 20
+    },
+    {
+      "agendaId": 4936,
+      "profKey": "pid:1488",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:30",
+      "horaFin": "19:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 5243,
+      "profKey": "pid:1211",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 5389,
+      "profKey": "pid:1514",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "07:00",
+      "horaFin": "09:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 5025,
+      "profKey": "pid:1530",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "07:00",
+      "horaFin": "09:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 5104,
+      "profKey": "pid:1514",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 5026,
+      "profKey": "pid:1530",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "12:30",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 5244,
+      "profKey": "pid:1211",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 4699,
+      "profKey": "pid:1370",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:30",
+      "horaFin": "18:30",
+      "dur": 20
+    },
+    {
+      "agendaId": 5105,
+      "profKey": "pid:1488",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "13:30",
+      "horaFin": "19:30",
+      "dur": 15
+    },
+    {
+      "agendaId": 5027,
+      "profKey": "pid:1530",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "09:40",
+      "horaFin": "10:10",
+      "dur": 30
+    },
+    {
+      "agendaId": 4694,
+      "profKey": "pid:1393",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 4689,
+      "profKey": "pid:1417",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "07:00",
+      "horaFin": "09:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4690,
+      "profKey": "pid:1417",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 5371,
+      "profKey": "pid:1530",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "13:30",
+      "horaFin": "18:45",
+      "dur": 15
+    },
+    {
+      "agendaId": 4706,
+      "profKey": "pid:1371",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:30",
+      "horaFin": "19:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 5002,
+      "profKey": "pid:1417",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:30",
+      "horaFin": "19:10",
+      "dur": 20
+    },
+    {
+      "agendaId": 4693,
+      "profKey": "pid:1417",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "14:00",
+      "horaFin": "19:00",
+      "dur": 20
+    },
+    {
+      "agendaId": 2844,
+      "profKey": "nm:franco rossitto",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 2842,
+      "profKey": "nm:franco rossitto",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 2843,
+      "profKey": "nm:franco rossitto",
+      "espId": 36,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "07:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 5485,
+      "profKey": "pid:1252",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "5",
+      "horaInicio": "11:10",
+      "horaFin": "12:10",
+      "dur": 30
+    },
+    {
+      "agendaId": 5487,
+      "profKey": "pid:1433",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "3",
+      "horaInicio": "14:50",
+      "horaFin": "16:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 4495,
+      "profKey": "nm:adriana zurita",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "4",
+      "horaInicio": "09:00",
+      "horaFin": "15:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 4783,
+      "profKey": "nm:cintia solange pineda",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "4",
+      "horaInicio": "12:15",
+      "horaFin": "13:45",
+      "dur": 15
+    },
+    {
+      "agendaId": 4405,
+      "profKey": "nm:cintia solange pineda",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "5",
+      "horaInicio": "11:45",
+      "horaFin": "15:45",
+      "dur": 15
+    },
+    {
+      "agendaId": 4609,
+      "profKey": "nm:judith maciel",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "2",
+      "horaInicio": "09:00",
+      "horaFin": "13:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 4817,
+      "profKey": "nm:juan pablo salinas",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "2",
+      "horaInicio": "12:00",
+      "horaFin": "15:50",
+      "dur": 10
+    },
+    {
+      "agendaId": 4160,
+      "profKey": "nm:juan pablo salinas",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "3",
+      "horaInicio": "12:00",
+      "horaFin": "15:40",
+      "dur": 10
+    },
+    {
+      "agendaId": 4109,
+      "profKey": "nm:diego diaz",
+      "espId": 136,
+      "institucionId": 247,
+      "dias": "1",
+      "horaInicio": "09:30",
+      "horaFin": "15:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4646,
+      "profKey": "pid:1261",
+      "espId": 263,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "12:30",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 5326,
+      "profKey": "pid:1554",
+      "espId": 263,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "08:30",
+      "horaFin": "15:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4648,
+      "profKey": "nm:cesar ullon",
+      "espId": 263,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 4649,
+      "profKey": "nm:cesar ullon",
+      "espId": 263,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 3725,
+      "profKey": "pid:1412",
+      "espId": 232,
+      "institucionId": 246,
+      "dias": "2",
+      "horaInicio": "12:00",
+      "horaFin": "13:10",
+      "dur": 10
+    },
+    {
+      "agendaId": 3726,
+      "profKey": "pid:1412",
+      "espId": 232,
+      "institucionId": 246,
+      "dias": "3",
+      "horaInicio": "12:00",
+      "horaFin": "13:10",
+      "dur": 10
+    },
+    {
+      "agendaId": 3727,
+      "profKey": "pid:1412",
+      "espId": 232,
+      "institucionId": 246,
+      "dias": "4",
+      "horaInicio": "12:00",
+      "horaFin": "13:10",
+      "dur": 10
+    },
+    {
+      "agendaId": 3728,
+      "profKey": "pid:1412",
+      "espId": 232,
+      "institucionId": 246,
+      "dias": "5",
+      "horaInicio": "12:00",
+      "horaFin": "13:10",
+      "dur": 10
+    },
+    {
+      "agendaId": 4170,
+      "profKey": "pid:1240",
+      "espId": 232,
+      "institucionId": 250,
+      "dias": "6",
+      "horaInicio": "10:30",
+      "horaFin": "12:36",
+      "dur": 7
+    },
+    {
+      "agendaId": 4171,
+      "profKey": "pid:1240",
+      "espId": 232,
+      "institucionId": 250,
+      "dias": "0",
+      "horaInicio": "15:00",
+      "horaFin": "16:30",
+      "dur": 5
+    },
+    {
+      "agendaId": 4371,
+      "profKey": "pid:1240",
+      "espId": 232,
+      "institucionId": 250,
+      "dias": "1",
+      "horaInicio": "11:00",
+      "horaFin": "14:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 3724,
+      "profKey": "pid:1412",
+      "espId": 232,
+      "institucionId": 246,
+      "dias": "1",
+      "horaInicio": "12:10",
+      "horaFin": "13:10",
+      "dur": 10
+    },
+    {
+      "agendaId": 4372,
+      "profKey": "pid:1240",
+      "espId": 232,
+      "institucionId": 250,
+      "dias": "2",
+      "horaInicio": "11:00",
+      "horaFin": "14:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 4373,
+      "profKey": "pid:1240",
+      "espId": 232,
+      "institucionId": 250,
+      "dias": "3",
+      "horaInicio": "11:00",
+      "horaFin": "14:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 4374,
+      "profKey": "pid:1240",
+      "espId": 232,
+      "institucionId": 250,
+      "dias": "4",
+      "horaInicio": "11:00",
+      "horaFin": "14:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 4375,
+      "profKey": "pid:1240",
+      "espId": 232,
+      "institucionId": 250,
+      "dias": "5",
+      "horaInicio": "11:00",
+      "horaFin": "14:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 5149,
+      "profKey": "pid:1504",
+      "espId": 241,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "17:30",
+      "horaFin": "19:42",
+      "dur": 4
+    },
+    {
+      "agendaId": 2896,
+      "profKey": "pid:1270",
+      "espId": 241,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "15:00",
+      "horaFin": "18:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4810,
+      "profKey": "nm:maria alejandra donofrio pasaporte",
+      "espId": 241,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "17:30",
+      "horaFin": "19:30",
+      "dur": 10
+    },
+    {
+      "agendaId": 4326,
+      "profKey": "nm:seminario torres",
+      "espId": 241,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "15:00",
+      "horaFin": "18:00",
+      "dur": 15
+    },
+    {
+      "agendaId": 4259,
+      "profKey": "nm:oscar gardeñez",
+      "espId": 241,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "10:00",
+      "horaFin": "14:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4749,
+      "profKey": "pid:1440",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "13:00",
+      "horaFin": "18:36",
+      "dur": 7
+    },
+    {
+      "agendaId": 5132,
+      "profKey": "pid:1507",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "15:00",
+      "horaFin": "18:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5154,
+      "profKey": "pid:1512",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "15:00",
+      "horaFin": "18:02",
+      "dur": 7
+    },
+    {
+      "agendaId": 2789,
+      "profKey": "pid:1185",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "09:30",
+      "horaFin": "14:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 4755,
+      "profKey": "pid:1189",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "11:00",
+      "horaFin": "15:05",
+      "dur": 7
+    },
+    {
+      "agendaId": 5386,
+      "profKey": "pid:1440",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:49",
+      "horaFin": "18:01",
+      "dur": 7
+    },
+    {
+      "agendaId": 5087,
+      "profKey": "pid:1406",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "15:00",
+      "horaFin": "18:02",
+      "dur": 7
+    },
+    {
+      "agendaId": 5130,
+      "profKey": "pid:1512",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "15:00",
+      "horaFin": "18:02",
+      "dur": 7
+    },
+    {
+      "agendaId": 5248,
+      "profKey": "pid:1397",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "15:00",
+      "horaFin": "19:05",
+      "dur": 7
+    },
+    {
+      "agendaId": 3703,
+      "profKey": "pid:1428",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "08:00",
+      "horaFin": "16:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5250,
+      "profKey": "pid:1552",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "11:00",
+      "horaFin": "15:05",
+      "dur": 7
+    },
+    {
+      "agendaId": 5316,
+      "profKey": "pid:1468",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "14:00",
+      "horaFin": "18:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3704,
+      "profKey": "pid:1428",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "08:00",
+      "horaFin": "12:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3304,
+      "profKey": "pid:1184",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "09:00",
+      "horaFin": "14:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3652,
+      "profKey": "pid:1318",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "09:00",
+      "horaFin": "18:00",
+      "dur": 30
+    },
+    {
+      "agendaId": 4486,
+      "profKey": "pid:1267",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 12
+    },
+    {
+      "agendaId": 4282,
+      "profKey": "pid:1475",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "09:00",
+      "horaFin": "13:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5340,
+      "profKey": "pid:1277",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "13:00",
+      "horaFin": "17:05",
+      "dur": 7
+    },
+    {
+      "agendaId": 5356,
+      "profKey": "pid:1519",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "08:00",
+      "horaFin": "10:06",
+      "dur": 7
+    },
+    {
+      "agendaId": 4517,
+      "profKey": "pid:1406",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "15:00",
+      "horaFin": "18:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5374,
+      "profKey": "pid:1406",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "10:00",
+      "horaFin": "14:05",
+      "dur": 7
+    },
+    {
+      "agendaId": 3734,
+      "profKey": "pid:1356",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "15:00",
+      "horaFin": "19:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 5387,
+      "profKey": "pid:1440",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "13:00",
+      "horaFin": "18:01",
+      "dur": 7
+    },
+    {
+      "agendaId": 4530,
+      "profKey": "pid:1440",
+      "espId": 166,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "13:00",
+      "horaFin": "18:01",
+      "dur": 7
+    },
+    {
+      "agendaId": 3168,
+      "profKey": "pid:1159",
+      "espId": 246,
+      "institucionId": 240,
+      "dias": "1",
+      "horaInicio": "08:30",
+      "horaFin": "17:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3169,
+      "profKey": "pid:1159",
+      "espId": 246,
+      "institucionId": 240,
+      "dias": "2",
+      "horaInicio": "08:30",
+      "horaFin": "17:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3170,
+      "profKey": "pid:1159",
+      "espId": 246,
+      "institucionId": 240,
+      "dias": "3",
+      "horaInicio": "08:30",
+      "horaFin": "17:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3171,
+      "profKey": "pid:1159",
+      "espId": 246,
+      "institucionId": 240,
+      "dias": "4",
+      "horaInicio": "08:30",
+      "horaFin": "17:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3172,
+      "profKey": "pid:1159",
+      "espId": 246,
+      "institucionId": 240,
+      "dias": "5",
+      "horaInicio": "08:30",
+      "horaFin": "17:00",
+      "dur": 10
+    },
+    {
+      "agendaId": 3173,
+      "profKey": "pid:1159",
+      "espId": 246,
+      "institucionId": 240,
+      "dias": "6",
+      "horaInicio": "08:30",
+      "horaFin": "12:00",
+      "dur": 10
+    }
+  ]
+}

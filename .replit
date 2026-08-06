@@ -1,0 +1,74 @@
+modules = ["nodejs-24", "python-3.11", "postgresql-16"]
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+build = ["pnpm", "--filter", "@workspace/api-server", "run", "build"]
+run = ["pnpm", "--filter", "@workspace/api-server", "start"]
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "test"
+
+[[workflows.workflow]]
+name = "test"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm --filter @workspace/api-server run test"
+
+[workflows.workflow.metadata]
+isValidation = true
+
+[agent]
+stack = "PNPM_WORKSPACE"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 180000
+
+[nix]
+channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+KLINICOS_TOKEN_VALIDATION_ENABLED = "true"
+ROBOT_TOKEN_VALIDATION_TIMEOUT_MS = "30000"
+KLINICOS_CONSULTATIONS_PROCESS_ENABLED = "true"
+PACS_PILOT_EMAILS = "admin@diagnosticar.ar"
+PULSO_SYNC_ENABLED = "false"
+PHIRIT_POLLER_ENABLED = "false"
+APP_PACIENTE_PUSH_URL = "https://diagnosticar-clinic-portal.replit.app"
+WHATICKET_API_URL = "https://api.whaticket.com/api/v1"
+WHATICKET_CONNECTION_UUID = "343c4525-57b4-4737-b07a-b5fed4c6537e"
+WHATICKET_TEMPLATE_ID = "1e94bca0-1fe4-4d0b-a5d8-c38681eb21c8"
+
+[userenv.development]
+KLINICOS_DRY_RUN = "1"
+PACS_WORKSPACE_ENABLED = "true"
+PACS_WORKLIST_ENABLED = "true"
+PACS_WORKLIST_URL = "http://127.0.0.1:8080/api/pacs-sim"
+APP_DB_NAME = "conectar_app_dev"
+ROBOT_API_URL = "https://dd3d827b-d951-4c7a-bac9-cc93467cd732-00-azl6gsr9y1hz.kirk.replit.dev"
+
+[userenv.production]
+PACS_WORKSPACE_ENABLED = "true"
+APP_DB_NAME = "conectar_app_prod"
+ROBOT_API_URL = "https://web-automation-bot.replit.app"
+KLINICOS_DRY_RUN = "0"
+URL_PUBLICA_APP = "https://clinicadiagnosticar.com"

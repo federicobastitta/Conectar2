@@ -1,0 +1,295 @@
+﻿ID,Agenda,Profesional,Especialidad,Sede,Días,Horario,Duración (min),Modalidad,Guardia,Visibilidad
+430,Turnera Sede Test 6f520119e5e7,,,,Lun Mar Mié Jue Vie,08:00-18:00,30,presencial,,recepcion
+1965,Ana Ignacio de la Barra — Cardiología,Ana Ignacio,Cardiología,Sede Lomas de Zamora,Jue,11:50-12:50,10,presencial,,recepcion
+1415,"Brian Alfonso, — Cardiologia",Garcia Demera,Cardiología,Cardiologia- Berazategui,Jue Vie,08:30-13:20,15,presencial,,recepcion
+7,Cardiología — Alison Giselle Rivera Gonzales,Alison Giselle,Cardiología,Cardiologia- Berazategui,Lun Vie,08:30-17:09,12,presencial,,online
+4,Cardiología — Garcia Demera Brian Alfonso,Garcia Demera,Cardiología,Cardiologia- Berazategui,Jue Vie,08:00-13:30,15,presencial,,online
+2,Cardiología — Patricio Xavier Orellana Quezada,Patricio Xavier,Cardiología,Cardiologia- Berazategui,Mar,13:00-17:00,10,presencial,,online
+6,Cardiología — Paula Ribeiro Silva,Paula,Cardiología,Cardiologia- Berazategui,Vie,09:00-13:00,15,presencial,,online
+1,Cardiología — Ruben Nahuel Alvarez Lopez,Ruben Nahuel,Cardiología,Cardiologia- Berazategui,Lun Mar Mié,09:00-20:00,10,presencial,,online
+5,Cardiología — Veronica Mariuxi Armijos Tocto,Veronica Mariuxi,Cardiología,Cardiologia- Berazategui,Jue Vie,09:00-15:00,10,presencial,,online
+1973,Garcia Demera Brian Alfonso — Cardiología,Garcia Demera,Cardiología,Sede Lomas de Zamora,Lun Mar,09:05-09:45,30,presencial,,recepcion
+2095,Guardia Cardiología,,Cardiología,Cardiologia- Berazategui,Lun Mar Mié Jue Vie,08:00-20:00,15,presencial,Sí,recepcion
+1455,"Orellana Quezada, — Cardiologia",Patricio Xavier,Cardiología,Cardiologia- Berazategui,Mar,13:00-17:00,10,presencial,,recepcion
+1422,"Rivera Gonzales, — Cardiologia",Alison Giselle,Cardiología,Cardiologia- Berazategui,Lun Vie,09:00-13:30,13,presencial,,recepcion
+1967,Ruben Nahuel (calle 15 N° 4676) Alvarez Lopez — Cardiología,Ruben Nahuel (calle 15 N° 4676) Alvarez,Cardiología,Cardiologia- Berazategui,Lun Mar Mié,09:00-15:40,10,presencial,,recepcion
+10,CARDIOLOGIA INFANTIL — Nestor Alberto Jerez,,Cardiología infantil,Cardiologia- Berazategui,Lun Mar Mié Jue Vie,13:00-15:00,15,presencial,,online
+1427,"Jerez, Nestor — Cardiologia Infantil",Nestor Alberto,Cardiología infantil,Cardiologia- Berazategui,Lun,13:00-15:00,10,presencial,,recepcion
+1489,De La — Cardiologia Lomas De Zamora,Ana Ignacio,Cardiología Lomas de Zamora,Sede Lomas de Zamora,Jue,10:15-13:25,10,presencial,,recepcion
+1976,Garcia Demera Brian Alfonso — Cardiologia Lomas de Zamora,Garcia Demera,Cardiología Lomas de Zamora,Sede Lomas de Zamora,Lun Mar,08:30-13:30,15,presencial,,recepcion
+1972,Ruben Nahuel (calle 15 N° 4676) Alvarez Lopez — Cardiologia Por Demanda Espontanea,Ruben Nahuel (calle 15 N° 4676) Alvarez,Cardiología por demanda espontánea,Cardiologia- Berazategui,Mié,04:45-05:15,30,presencial,,recepcion
+11,Cirugía — Diego Santiago Fabiano,Diego Santiago,Cirugía,Central- Berazategui,Lun,15:00-18:00,10,presencial,,online
+13,Cirugía — Federico Ignacio Frontera,Federico Ignacio,Cirugía,Central- Berazategui,Jue,17:00-20:02,7,presencial,,online
+12,Cirugía — Mariano Gustavo Fredes,Mariano Gustavo,Cirugía,Central- Berazategui,Mar,13:00-15:00,10,presencial,,online
+1286,"Fabiano, Diego — Cirugia General",Diego Santiago,Cirugía general,Central- Berazategui,Lun,15:00-18:00,10,presencial,,recepcion
+1474,"Fredes, Mariano — Cirugia General",Mariano Gustavo,Cirugía general,Central- Berazategui,Mar,13:00-15:00,10,presencial,,recepcion
+1475,"Frontera, Federico — Cirugia General",Federico Ignacio,Cirugía general,Central- Berazategui,Jue,17:00-20:00,10,presencial,,recepcion
+1322,"Del Bene, — Clinica Medica- Lomas De Zamora",Franco,Clínica médica Lomas de Zamora,Sede Lomas de Zamora,Lun,08:00-17:00,15,presencial,,recepcion
+1400,"Pinto, Rosa — Clinica Medica- Lomas De Zamora",Rosa,Clínica médica Lomas de Zamora,Sede Lomas de Zamora,Mar Sáb,08:30-17:00,5,presencial,,recepcion
+1420,"Santa Cruz, — Clinica Medica- Lomas De Zamora",Fernando Maximiliano,Clínica médica Lomas de Zamora,Sede Lomas de Zamora,Jue Vie,08:00-18:00,30,presencial,,recepcion
+1282,"Boianelli, Antonieta — Dermatologia",Antonieta,Dermatología,Central- Berazategui,Lun,17:00-18:30,5,presencial,,recepcion
+18,Dermatologia — Antonieta Boianelli,Antonieta,Dermatología,Central- Berazategui,Lun,17:00-18:35,10,presencial,,online
+16,Dermatologia — Erica Yolima Mora Aguilar,Erica Yolima,Dermatología,Central- Berazategui,Mar Sáb,08:00-18:00,15,presencial,,online
+1304,"Mora Aguilar, — Dermatologia",Erica Yolima,Dermatología,Central- Berazategui,Mar Sáb,14:00-18:00,15,presencial,,recepcion
+1254,"Sangalli, Agustina — Dermatologia",Agustina,Dermatología,Central- Berazategui,Lun,09:00-12:05,10,presencial,,recepcion
+1975,Sofia Iara Ansoar — Dermatologia Lomas de Zamora,Sofia Iara,Dermatología Lomas de Zamora,Sede Lomas de Zamora,Mié,08:00-16:10,10,presencial,,recepcion
+1461,"Forlenza, Florencia — Diabetes Inicial",Florencia Magali,Diabetes inicial,Central- Berazategui,Jue,08:00-12:00,10,presencial,,recepcion
+1300,"Caceres, Franco — Ecocardiograma Y Doppler Cardiaco",Franco,Ecocardiograma y doppler cardíaco,Central- Berazategui,Sáb,13:30-16:30,7,presencial,,recepcion
+1301,"Caceres, Franco — Ecocardiograma Y Doppler Cardiaco",Franco,Ecocardiograma y doppler cardíaco,Central- Berazategui,Vie,14:00-19:00,10,presencial,,recepcion
+1299,"Castillo, Monica — Ecocardiograma Y Doppler Cardiaco",Monica,Ecocardiograma y doppler cardíaco,Central- Berazategui,Mié,09:00-11:30,10,presencial,,recepcion
+20,Ecocardiograma y doppler cardiaco — Franco Caceres,Franco,Ecocardiograma y doppler cardíaco,Central- Berazategui,Vie Sáb,13:30-19:00,10,presencial,,online
+19,Ecocardiograma y doppler cardiaco — Jorge Nonnis,Jorge,Ecocardiograma y doppler cardíaco,Central- Berazategui,Jue,07:30-15:15,10,presencial,,online
+21,Ecocardiograma y doppler cardiaco — Monica Castillo,Monica,Ecocardiograma y doppler cardíaco,Central- Berazategui,Mié,09:00-11:30,10,presencial,,online
+1346,"Leonardo Adrian, — Ecocardiograma Y Doppler Cardiaco",Ostratiuk,Ecocardiograma y doppler cardíaco,Central- Berazategui,Lun Mar Vie,08:00-13:04,7,presencial,,recepcion
+1298,"Nonnis, Jorge — Ecocardiograma Y Doppler Cardiaco",Jorge,Ecocardiograma y doppler cardíaco,Central- Berazategui,Jue,12:30-15:00,10,presencial,,recepcion
+1367,"Jerez, Nestor — Edoppler Cardiaco Infantil",Nestor Alberto,Ecodoppler cardíaco infantil,Central- Berazategui,Mar,13:00-15:00,12,presencial,,recepcion
+1510,"Sanchez Meneces, — Ecodoppler Cardiacos Lomas De Zamora",Franklin Marco,Ecodoppler cardíaco Lomas de Zamora,Sede Lomas de Zamora,Vie,08:30-12:30,10,presencial,,recepcion
+1434,"Bonilla Franco, — Ecografia",Jorge Enrique,Ecografía,Central- Berazategui,Lun,08:00-12:00,20,presencial,,recepcion
+1449,"Cedeno Carpio, — Ecografia",Adrian Alexander,Ecografía,Centro de la Mujer- Berazategui,Lun,09:00-16:30,15,presencial,,recepcion
+39,Ecografía — Adrian Alexander Cedeño Carpio,Adrian Alexander,Ecografía,Centro de la Mujer- Berazategui,Lun,09:00-16:30,15,presencial,,online
+34,Ecografía — Alejandra Lisath Guerrero Sendoya,Alejandra Lisath,Ecografía,Central- Berazategui,Vie,13:00-18:00,15,presencial,,online
+42,Ecografía — Antony Enrique Ojeda Davila,Antony Enrique,Ecografía,Centro de la Mujer- Berazategui,Mar Jue,08:00-16:00,10,presencial,,online
+22,Ecografía — Antony Enrique Ojeda Davila,Antony Enrique,Ecografía,Central- Berazategui,Lun,08:00-13:00,10,presencial,,online
+47,Ecografía — Carlos Jose Nieto Gomez,Carlos Jose,Ecografía,Central- Berazategui,Sáb,08:30-15:00,30,presencial,,online
+36,Ecografía — Carlos Muñoz,Carlos,Ecografía,Centro de la Mujer- Berazategui,Sáb,08:00-14:00,10,presencial,,online
+41,Ecografía — Carlos Muñoz,Carlos,Ecografía,Central- Berazategui,Mar Jue Vie,07:30-16:00,10,presencial,,online
+24,Ecografía — Emilio Jose Lira Villarroel,Emilio Jose,Ecografía,Central- Berazategui,Lun Jue,13:00-19:00,10,presencial,,online
+37,Ecografía — Esau Vicente Sani Alcibar,Esau Vicente,Ecografía,Central- Berazategui,Sáb,09:00-15:00,10,presencial,,online
+23,Ecografía — Jorge Enrique Bonilla Franco,Jorge Enrique,Ecografía,Central- Berazategui,Lun,08:00-12:00,20,presencial,,online
+32,Ecografía — Jorge Enrique Bonilla Franco,Jorge Enrique,Ecografía,Centro de la Mujer- Berazategui,Vie,09:00-17:00,15,presencial,,online
+35,Ecografía — Macuace David,Macuace,Ecografía,Central- Berazategui,Sáb,08:00-14:00,15,presencial,,online
+33,Ecografía — Macuace David,Macuace,Ecografía,Central- Berazategui,Vie,13:00-18:00,12,presencial,,online
+31,Ecografía — Macuace David,Macuace,Ecografía,Central- Berazategui,Vie,08:00-17:20,12,presencial,,online
+40,Ecografía — Natalia Soledad Fernandez,Natalia Soledad,Ecografía,Central- Berazategui,Lun Mar,09:10-17:40,20,presencial,,online
+43,Ecografía — Natalia Soledad Fernandez,Natalia Soledad,Ecografía,Central- Berazategui,Lun Mar,09:00-17:20,10,presencial,,online
+29,Ecografía — Prieto Giovanna,Prieto,Ecografía,Sede Lomas de Zamora,Jue,09:00-13:00,10,presencial,,online
+26,Ecografía — Varela Ana,Varela,Ecografía,Centro de la Mujer- Berazategui,Mié,09:00-15:00,10,presencial,,online
+27,Ecografía — Yadry Yacub,Yadry,Ecografía,Central- Berazategui,Mié,14:00-18:00,10,presencial,,online
+25,Ecografía — Yeisson Humberto Murcia Leal,Yeisson Humberto,Ecografía,Central- Berazategui,Mié,09:00-12:00,10,presencial,,online
+1453,"Fernandez, Natalia — Ecografia",Natalia Soledad,Ecografía,Central- Berazategui,Lun Mar,13:00-17:30,20,presencial,,recepcion
+1511,"Guerrero Sendoya, — Ecografia",Alejandra Lisath,Ecografía,Central- Berazategui,Vie,13:00-18:00,15,presencial,,recepcion
+1413,"Lira Villarroel, — Ecografia",Emilio Jose,Ecografía,Central- Berazategui,Lun Jue,13:00-17:30,15,presencial,,recepcion
+1412,"Munoz, Carlos — Ecografia",Carlos,Ecografía,Centro de la Mujer- Berazategui,Sáb,08:00-13:55,10,presencial,,recepcion
+1258,"Munoz, Carlos — Ecografia",Carlos,Ecografía,Central- Berazategui,Mar Jue Vie,07:30-16:00,10,presencial,,recepcion
+1309,"Murcia Leal, — Ecografia",Yeisson Humberto,Ecografía,Central- Berazategui,Mié,09:00-12:00,10,presencial,,recepcion
+1447,"Nieto Gomez, — Ecografia",Carlos Jose,Ecografía,Central- Berazategui,Sáb,08:30-15:00,30,presencial,,recepcion
+1426,"Ojeda Davila, — Ecografia",Antony Enrique,Ecografía,Centro de la Mujer- Berazategui,Mar Jue,13:00-15:50,10,presencial,,recepcion
+1306,"Ojeda Davila, — Ecografia",Antony Enrique,Ecografía,Central- Berazategui,Lun,08:00-13:00,10,presencial,,recepcion
+1261,"Yacub, Yadry — Ecografia",Yadry,Ecografía,Central- Berazategui,Mié,14:00-18:00,10,presencial,,recepcion
+1493,"Cedeno Carpio, — Ecografias Lomas De Zamora",Adrian Alexander,Ecografías Lomas de Zamora,Sede Lomas de Zamora,Vie,13:30-17:00,10,presencial,,recepcion
+1491,"Giovanna, Prieto — Ecografias Lomas De Zamora",Prieto,Ecografías Lomas de Zamora,Sede Lomas de Zamora,Jue,09:00-13:00,10,presencial,,recepcion
+1482,"Munoz, Carlos — Ecografias Lomas De Zamora",Carlos,Ecografías Lomas de Zamora,Sede Lomas de Zamora,Lun,07:30-13:30,10,presencial,,recepcion
+1385,"Calle 15, — Electrocardiograma1",Electrocardiograma,Electrocardiograma,Cardiologia- Berazategui,Lun Mar Mié Jue Vie Sáb,09:00-17:00,5,presencial,,recepcion
+1342,"Electrocardiograma, Electrocardiograma — Electrocardiograma1",Electrocardiograma Lomas De Zamora,Electrocardiograma,Sede Lomas de Zamora,Lun Mar Mié Jue Vie Sáb,08:00-17:00,5,presencial,,recepcion
+1343,"Electrocardiograma, Electrocardiograma — Electrocardiograma1",Electrocardiograma Lomas De Zamora,Electrocardiograma,Sede Lomas de Zamora,Mar Jue,08:00-18:00,10,presencial,,recepcion
+48,Electroencefalograma — E.e.g Electroencefalogramas,E.e.g,Electroencefalograma,Central- Berazategui,Sáb,09:00-14:00,15,presencial,,online
+1331,"Electroencefalogramas, E.e.g — Electroencefalograma",E.e.g,Electroencefalograma,Central- Berazategui,Sáb,09:00-14:00,15,presencial,,recepcion
+1406,"Coronel, Mariano — Endocrinologia",Mariano,Endocrinología,Central- Berazategui,Lun Mar Mié Jue Vie,08:00-12:00,10,presencial,,recepcion
+1411,"Santobuono Gabriele, — Enfermeria",Ailin,Enfermería,Central- Berazategui,Lun Mar Mié Jue Vie Sáb,08:00-20:00,7,presencial,,recepcion
+1395,"Ergometria, Berazategui — Ergometrias",Berazategui Calle 15 N° 4676,Ergometrías,Cardiologia- Berazategui,Dom Lun Mar Mié Jue Vie Sáb,00:00-23:59,10,presencial,,online,recepcion
+49,Ergometrias — Berazategui Calle 15 N° 4676 Ergometria,Berazategui Calle 15 N° 4676,Ergometrías,Cardiologia- Berazategui,Lun Mar Mié Jue Vie Sáb,08:00-16:30,15,presencial,,online
+1393,"Santome, Sergio — Eespirometrias",Sergio,Espirometrías,Central- Berazategui,Lun Vie,10:00-12:30,10,presencial,,recepcion
+1451,"Heredia, Sebastian — Gastroenterologia",Sebastian Manuel,Gastroenterología,Central- Berazategui,Lun Mar,09:00-15:34,6,presencial,,recepcion
+1368,"Palma, Agustina — Gastroenterologia",Agustina,Gastroenterología,Central- Berazategui,Mar,15:00-20:00,15,presencial,,recepcion
+1388,"Bersuker, Martin — Ginecologia",Martin Amadeo,Ginecología,Centro de la Mujer- Berazategui,Mié,10:00-14:00,10,presencial,,recepcion
+1379,"Cabarcas Palma, — Ginecologia",Diosa Patricia,Ginecología,Centro de la Mujer- Berazategui,Sáb,08:30-13:00,10,presencial,,recepcion
+1382,"Frette, Fernando — Ginecologia",Fernando,Ginecología,Centro de la Mujer- Berazategui,Lun Jue,13:00-17:00,15,presencial,,recepcion
+1374,"Gereme, Gustavo — Ginecologia",Gustavo,Ginecología,Centro de la Mujer- Berazategui,Lun Mié Jue,08:30-15:30,10,presencial,,recepcion
+69,Ginecología — Alejandro Daniel Morales,Alejandro Daniel,Ginecología,Centro de la Mujer- Berazategui,Mié Jue Vie,08:00-17:00,10,presencial,,online
+61,Ginecología — Bittar Carlos,Bittar,Ginecología,Centro de la Mujer- Berazategui,Mar Sáb,08:00-14:20,5,presencial,,online
+62,Ginecología — Diosa Patricia Cabarcas Palma,Diosa Patricia,Ginecología,Centro de la Mujer- Berazategui,Sáb,08:30-13:00,10,presencial,,online
+64,Ginecología — Dron Fernando,Dron,Ginecología,Centro de la Mujer- Berazategui,Lun Vie,11:00-15:00,10,presencial,,online
+72,Ginecología — Fernando Frette,Fernando,Ginecología,Centro de la Mujer- Berazategui,Lun Jue,08:00-17:00,15,presencial,,online
+77,Ginecología — Gabriela Beatriz Melis,Gabriela Beatriz,Ginecología,Centro de la Mujer- Berazategui,Mar Vie,09:00-17:00,15,presencial,,online
+63,Ginecología — Gustavo Gereme,Gustavo,Ginecología,Centro de la Mujer- Berazategui,Lun Mié Jue,08:30-15:30,10,presencial,,online
+75,Ginecología — Maria Nelida Guerini,Maria Nelida,Ginecología,Centro de la Mujer- Berazategui,Mar,08:30-12:00,10,presencial,,online
+68,Ginecología — Martin Amadeo Bersuker,Martin Amadeo,Ginecología,Centro de la Mujer- Berazategui,Mié,10:00-14:00,10,presencial,,online
+66,Ginecología — Steven Andres Teran Montenegro,Steven Andres,Ginecología,Centro de la Mujer- Berazategui,Mar,15:00-17:09,10,presencial,,online
+1508,"Llano, Josefina — Ginecologia",Josefina,Ginecología,Centro de la Mujer- Berazategui,Mié,15:01-17:30,10,presencial,,recepcion
+1381,"Morales, Alejandro — Ginecologia",Alejandro Daniel,Ginecología,Centro de la Mujer- Berazategui,Mié Jue Vie,14:00-17:00,10,presencial,,recepcion
+1966,Nuria Poltronieri — Ginecología,Nuria,Ginecología,Centro de la Mujer- Berazategui,Mié,14:00-17:00,15,presencial,,recepcion
+1969,Steven Andres Teran Montenegro — Ginecología,Steven Andres,Ginecología,Sede Lomas de Zamora,Mié Sáb,10:00-17:10,30,presencial,,recepcion
+1509,"Teran Montenegro, — Ginecologia",Steven Andres,Ginecología,Centro de la Mujer- Berazategui,Mar,15:00-17:00,7,presencial,,recepcion
+1485,"Alicia Daniela, — Ginecologia Lomas De Zamora",Acebal,Ginecología Lomas de Zamora,Sede Lomas de Zamora,Lun,09:00-13:00,15,presencial,,recepcion
+1495,"Carlos, Bittar — Ginecologia Lomas De Zamora",Bittar,Ginecología Lomas de Zamora,Sede Lomas de Zamora,Vie,10:30-15:45,10,presencial,,recepcion
+1487,"Gamburd, Constanza — Ginecologia Lomas De Zamora",Constanza Eliana,Ginecología Lomas de Zamora,Sede Lomas de Zamora,Mar,14:30-18:00,10,presencial,,recepcion
+1488,"Teran Montenegro, — Ginecologia Lomas De Zamora",Steven Andres,Ginecología Lomas de Zamora,Sede Lomas de Zamora,Sáb,09:00-12:30,10,presencial,,recepcion
+1797,Guardia Clinica,,Guardia clínica médica,Central- Berazategui,Dom Lun Mar Mié Jue Vie Sáb,08:00-20:00,15,presencial,Sí,callcenter,online,recepcion
+1340,"Ana, Varela — ",Varela,Guardia ecografía,Central- Berazategui,Dom,12:00-16:00,30,presencial,Sí,recepcion
+1296,"Dantas, Evelin — Guardia Odontologica - Lisandro",Evelin,Guardia odontológica - Lisandro,Central- Berazategui,Vie,12:00-19:00,20,presencial,Sí,recepcion
+1295,"Dantas, Evelin — Guardia Odontologica - Lisandro",Evelin,Guardia odontológica - Lisandro,Central- Berazategui,Sáb,08:00-12:00,20,presencial,Sí,recepcion
+4517,guardia oftalmologica,,Guardia oftalmológica,Centro Oftalmologico Berazategui,Lun Mar Mié Jue,00:00-23:59,15,presencial,Sí,recepcion
+1417,"Pineda, Cintia — Guardia Oftalmologica",Cintia Solange,Guardia oftalmológica,Centro Oftalmologico Berazategui,Sáb,09:00-15:00,5,presencial,Sí,recepcion
+4514,GUARDIA DE PEDIATRIA,,GUARDIA PEDIATRIA,Central- Berazategui,Lun Mar Mié Jue Vie,00:00-23:59,15,presencial,Sí,recepcion
+1251,"Vilte, Magali — Guardia Traumatologica",Magali,Guardia traumatológica,Central- Berazategui,Dom Lun Mar Mié Jue Vie Sáb,00:00-23:59,30,presencial,Sí,recepcion
+1269,"Holter, Calle — Holter",Calle 15 N° 4676,Holter,Central- Berazategui,Dom Lun Mar Mié Jue Vie Sáb,10:00-15:20,10,presencial,,recepcion
+1355,"Holter, Lomas — Holter",Lomas,Holter,Sede Lomas de Zamora,Lun Mar Mié Jue Vie,12:00-12:30,10,presencial,,recepcion
+91,HOLTER 12 CANALES — Calle 15 N° 4676 Holter,Calle 15 N° 4676,Holter 12 canales,Central- Berazategui,Sáb,10:45-11:05,5,presencial,,online
+90,HOLTER 12 CANALES — Calle 15 N° 4676 Holter,Calle 15 N° 4676,Holter 12 canales,Central- Berazategui,Sáb,10:00-10:30,5,presencial,,online
+83,HOLTER 12 CANALES — Calle 15 N° 4676 Holter,Calle 15 N° 4676,Holter 12 canales,Central- Berazategui,Dom Lun Mar Mié Jue Vie,14:00-14:30,5,presencial,,online
+84,HOLTER 12 CANALES — Calle 15 N° 4676 Holter,Calle 15 N° 4676,Holter 12 canales,Central- Berazategui,Lun Mar Mié Jue Vie,11:45-12:05,5,presencial,,online
+78,HOLTER 12 CANALES — Lomas Holter,Lomas,Holter 12 canales,Sede Lomas de Zamora,Lun Mar Mié Jue Vie,12:00-12:30,10,presencial,,online
+1418,"Mannarino, Patricio — Kinesiologia",Patricio,Kinesiología,Central- Berazategui,Lun Mar Mié Jue Vie Sáb,08:00-19:00,30,presencial,,recepcion
+1310,"Montecinos, Jose — Kinesiologia",Jose,Kinesiología,Central- Berazategui,Lun Mar Mié Jue Vie,08:00-19:00,10,presencial,,recepcion
+96,Mamografía — Mamografia Mamografia Bilateral,Mamografia,Mamografía,Centro de la Mujer- Berazategui,Lun Mar Mié Jue Vie Sáb,09:00-15:00,10,presencial,,online
+1390,"Mamografia Bilateral, — Mamografia",Mamografia,Mamografía,Centro de la Mujer- Berazategui,Lun Mar Mié Jue Vie Sáb,09:00-16:00,10,presencial,,recepcion
+1289,"Bertino, Eugenia — Neumonologia",Eugenia Gisela,Neumonología,Central- Berazategui,Lun Mié,15:00-19:00,15,presencial,,recepcion
+102,NEUMONOLOGIA — Eugenia Gisela Bertino,Eugenia Gisela,Neumonología,Central- Berazategui,Lun Mié,14:00-19:00,15,presencial,,online
+104,NEUMONOLOGIA — Julio Figueroa,Julio,Neumonología,Central- Berazategui,Vie,08:00-18:00,15,presencial,,callcenter,online,recepcion
+1470,"Whittingham Campo, — Neumonologia Infantil",Jennifer Del Carmen,Neumonología infantil,Central- Berazategui,Mar,10:00-18:00,15,presencial,,recepcion
+1283,"Delgado Vargas, — Neurologia",Americo,Neurología,Central- Berazategui,Mié Vie,09:30-12:00,10,presencial,,recepcion
+1360,"Maximiliano Haidar, — Neurologia",Mohor Cerda,Neurología,Central- Berazategui,Mar,17:30-19:30,8,presencial,,recepcion
+1358,"Maximiliano Haidar, — Neurologia",Mohor Cerda,Neurología,Central- Berazategui,Mar Jue,15:00-19:02,10,presencial,,recepcion
+106,Neurología — Americo Delgado Vargas,Americo,Neurología,Central- Berazategui,Mié Vie,09:01-18:00,10,presencial,,online
+1490,"Fernandez Rothlisberger, — Neurologia Lomas De Zamora",Fabiana,Neurología Lomas de Zamora,Sede Lomas de Zamora,Jue,12:00-17:00,15,presencial,,recepcion
+1494,"Palermo, Elvira — Nutricion Lomas De Zamora",Elvira Susana,Nutrición Lomas de Zamora,Sede Lomas de Zamora,Vie,09:00-11:30,10,presencial,,recepcion
+1471,Acosta (atiende — Odontologia,Malena,Odontología,Central- Berazategui,Sáb,08:30-13:30,15,presencial,,recepcion
+1444,"Agnoli, Alexis — Odontologia",Alexis (los Dias Miercoles Atiende Calle 147),Odontología,Central- Berazategui,Mar Mié Vie,07:00-13:10,30,presencial,,recepcion
+1313,Amarilla (calle — Odontologia,Laura,Odontología,Central- Berazategui,Lun Mié Jue Vie,07:00-19:00,20,presencial,,recepcion
+1326,"Bodeman, Geraldine — Odontologia",Geraldine,Odontología,Central- Berazategui,Lun Jue Vie,08:00-13:00,20,presencial,,recepcion
+1500,"Canete, Maiten — Odontologia",Maiten,Odontología,Central- Berazategui,Sáb,14:30-19:30,15,presencial,,recepcion
+1457,Cari (atiende — Odontologia,Cecilia,Odontología,Central- Berazategui,Mar Vie Sáb,07:00-18:45,15,presencial,,recepcion
+1308,"Cepero, Aldana — Odontologia",Aldana,Odontología,Central- Berazategui,Lun,09:00-12:30,30,presencial,,recepcion
+1332,"Collazo, Belen — Odontologia",Belen (calle 147),Odontología,Central- Berazategui,Mar Mié Jue,07:00-18:50,20,presencial,,recepcion
+1334,"Gallo Mendoza, — Odontologia",Rocio Belen (calle 147),Odontología,Central- Berazategui,Lun Mar Mié Jue Vie,08:00-19:10,20,presencial,,recepcion
+1963,Jacqueline (calle 147) Mamani — Odontología,Jacqueline (calle 147),Odontología,Central- Berazategui,Lun Mar Jue Vie,07:00-18:25,15,presencial,,recepcion
+1348,"Kesler, Eliana — Odontologia",Eliana (calle 147),Odontología,Central- Berazategui,Mar Mié Jue Vie,07:00-19:00,20,presencial,,recepcion
+1265,"Levy, Cecilia — Odontologia",Cecilia,Odontología,Central- Berazategui,Mié Jue Vie,07:00-13:00,30,presencial,,recepcion
+1467,"Lezana, Camila — Odontologia",Camila,Odontología,Central- Berazategui,Lun,13:30-18:45,15,presencial,,recepcion
+1320,Maria (calle — Odontologia,De La Serna,Odontología,Central- Berazategui,Mié,07:00-18:50,20,presencial,,recepcion
+1321,Maria (calle — Odontologia,De La Serna,Odontología,Central- Berazategui,Mié,13:30-19:00,20,presencial,,recepcion
+1318,Narvaez (calle — Odontologia,Ludmila,Odontología,Central- Berazategui,Mar Vie Sáb,08:00-18:30,20,presencial,,recepcion
+143,Odontología — Aldana Cepero,Aldana,Odontología,Central- Berazategui,Lun,07:00-12:30,15,presencial,,online
+111,Odontología — Alexis Agnoli,Alexis,Odontología,Central- Berazategui,Mar Mié Vie,07:00-13:00,30,presencial,,online
+119,Odontología — Belen Collazo,Belen,Odontología,Central- Berazategui,Mar Jue,07:00-13:00,20,presencial,,online
+115,Odontología — Belen Collazo,Belen,Odontología,Central- Berazategui,Mié,13:50-18:50,20,presencial,,online
+146,Odontología — Camila Lezana,Camila,Odontología,Central- Berazategui,Lun,07:00-18:45,15,presencial,,online
+133,Odontología — Carolina Trombetta,Carolina,Odontología,Central- Berazategui,Vie Sáb,08:00-19:30,20,presencial,,online
+184,Odontología — Cecilia Cari,Cecilia,Odontología,Central- Berazategui,Mar,13:30-18:45,15,presencial,,online
+176,Odontología — Cecilia Cari,Cecilia,Odontología,Central- Berazategui,Vie,12:30-13:00,30,presencial,,online
+174,Odontología — Cecilia Cari,Cecilia,Odontología,Central- Berazategui,Vie,07:00-09:00,15,presencial,,online
+180,Odontología — Cecilia Cari,Cecilia,Odontología,Central- Berazategui,Sáb,09:40-10:10,30,presencial,,online
+116,Odontología — Cecilia Levy,Cecilia,Odontología,Central- Berazategui,Mié Jue Vie,07:00-13:00,30,presencial,,online
+125,Odontología — Dayla Mitchell Ramos Ramirez,Dayla Mitchell,Odontología,Central- Berazategui,Mar Mié Jue Vie,13:30-18:50,20,presencial,,online
+185,Odontología — De La Serna Maria,De La Serna,Odontología,Central- Berazategui,Mié,13:30-19:10,20,presencial,,online
+168,Odontología — De La Serna Maria,De La Serna,Odontología,Central- Berazategui,Mié,07:00-13:00,20,presencial,,online
+187,Odontología — Eliana Kesler,Eliana,Odontología,Central- Berazategui,Vie,14:00-19:00,20,presencial,,online
+127,Odontología — Eliana Kesler,Eliana,Odontología,Central- Berazategui,Mié Jue,13:30-19:10,20,presencial,,online
+182,Odontología — Eliana Kesler,Eliana,Odontología,Central- Berazategui,Mar,07:00-09:00,15,presencial,,online
+183,Odontología — Eliana Kesler,Eliana,Odontología,Central- Berazategui,Mar,09:00-13:00,30,presencial,,online
+118,Odontología — Eliana Natali Salinas,Eliana Natali,Odontología,Central- Berazategui,Jue,07:00-12:30,15,presencial,,online
+123,Odontología — Eliana Natali Salinas,Eliana Natali,Odontología,Central- Berazategui,Lun Jue,13:30-19:10,20,presencial,,online
+157,Odontología — Evelin Dantas,Evelin,Odontología,Central- Berazategui,Lun Mar,07:00-19:00,20,presencial,,online
+188,Odontología — Franco Rossitto,Franco,Odontología,Central- Berazategui,Mar Mié Jue,07:00-13:00,30,presencial,,online
+120,Odontología — Geraldine Bodeman,Geraldine,Odontología,Central- Berazategui,Lun Jue Vie,08:00-19:30,20,presencial,,online
+163,Odontología — Jacqueline Mamani,Jacqueline,Odontología,Central- Berazategui,Mar,13:30-19:00,15,presencial,,online
+177,Odontología — Jacqueline Mamani,Jacqueline,Odontología,Central- Berazategui,Vie,13:30-18:30,20,presencial,,online
+142,Odontología — Jacqueline Mamani,Jacqueline,Odontología,Central- Berazategui,Lun Jue,07:00-13:00,15,presencial,,online
+113,Odontología — Laura Amarilla,Laura,Odontología,Central- Berazategui,Mié,09:00-13:00,30,presencial,,online
+117,Odontología — Laura Amarilla,Laura,Odontología,Central- Berazategui,Lun Jue Vie,07:00-13:00,20,presencial,,online
+110,Odontología — Laura Amarilla,Laura,Odontología,Central- Berazategui,Mié,07:00-09:00,15,presencial,,online
+122,Odontología — Laura Amarilla,Laura,Odontología,Central- Berazategui,Jue,13:30-19:10,20,presencial,,online
+135,Odontología — Ludmila Narvaez,Ludmila,Odontología,Central- Berazategui,Sáb,08:00-13:40,20,presencial,,online
+164,Odontología — Ludmila Narvaez,Ludmila,Odontología,Central- Berazategui,Mar Vie,13:30-18:30,20,presencial,,online
+138,Odontología — Maiten Cañete,Maiten,Odontología,Central- Berazategui,Sáb,08:00-19:30,15,presencial,,online
+139,Odontología — Malena Acosta,Malena,Odontología,Central- Berazategui,Sáb,08:30-13:30,15,presencial,,online
+156,Odontología — Marcela Schwindt,Marcela,Odontología,Central- Berazategui,Lun Sáb,08:00-19:30,20,presencial,,online
+109,Odontología — Noelia Varela,Noelia,Odontología,Central- Berazategui,Lun Mié,07:00-19:00,30,presencial,,online
+114,Odontología — Paola Sosa,Paola,Odontología,Central- Berazategui,Lun Mar Mié Jue,13:30-18:30,15,presencial,,online
+160,Odontología — Regina Zugnoni,Regina,Odontología,Central- Berazategui,Mar Mié Vie,08:00-19:45,15,presencial,,online
+112,Odontología — Rocio Belen Gallo Mendoza,Rocio Belen,Odontología,Central- Berazategui,Mar Mié Vie,08:00-13:00,20,presencial,,online
+126,Odontología — Rocio Belen Gallo Mendoza,Rocio Belen,Odontología,Central- Berazategui,Lun Jue,13:30-19:10,20,presencial,,online
+148,Odontología — Rocio Belen Gallo Mendoza,Rocio Belen,Odontología,Central- Berazategui,Lun,08:00-10:00,15,presencial,,online
+149,Odontología — Rocio Belen Gallo Mendoza,Rocio Belen,Odontología,Central- Berazategui,Lun,10:00-13:00,30,presencial,,online
+134,Odontología — Veronica Garate,Veronica,Odontología,Central- Berazategui,Lun Vie,07:00-19:10,20,presencial,,online
+1330,"Ramos Ramirez, — Odontologia",Dayla Mitchell (calle 147),Odontología,Central- Berazategui,Mar Mié Jue Vie,13:30-18:50,20,presencial,,recepcion
+1268,"Rossitto, Franco — Odontologia",Franco,Odontología,Central- Berazategui,Mar Mié Jue,07:00-13:00,30,presencial,,recepcion
+1323,Salinas (calle — Odontologia,Eliana Natali,Odontología,Central- Berazategui,Lun Jue,07:00-18:50,15,presencial,,recepcion
+1477,"Schwindt, Marcela — Odontologia",Marcela,Odontología,Central- Berazategui,Lun Sáb,13:30-18:30,20,presencial,,recepcion
+1266,"Sosa, Paola — Odontologia",Paola,Odontología,Central- Berazategui,Lun Mar Mié Jue,13:30-18:30,15,presencial,,recepcion
+1262,"Varela, Noelia — Odontologia",Noelia,Odontología,Central- Berazategui,Lun Mié,13:30-19:00,30,presencial,,recepcion
+1431,"Zugnoni, Regina — Odontologia",Regina,Odontología,Central- Berazategui,Mar Mié Vie,13:30-19:30,15,presencial,,recepcion
+1978,Aldana Cepero — Odontologia Lomas de Zamora,Aldana,Odontología Lomas de Zamora,Sede Lomas de Zamora,Mar,08:00-17:50,20,presencial,,recepcion
+1503,"Chavez, Macarena — Odontologia Lomas De Zamora",Macarena,Odontología Lomas de Zamora,Sede Lomas de Zamora,Mié,08:00-18:00,20,presencial,,recepcion
+1512,"Forneri, Fiorella — Odontologia Lomas De Zamora",Fiorella,Odontología Lomas de Zamora,Sede Lomas de Zamora,Jue,12:30-17:30,20,presencial,,recepcion
+1501,Mieres (atiende — Odontologia Lomas De Zamora,Aldana,Odontología Lomas de Zamora,Sede Lomas de Zamora,Lun Vie,08:00-18:10,20,presencial,,recepcion
+1505,"Verrina, Melanie — Odontologia Lomas De Zamora",Melanie,Odontología Lomas de Zamora,Sede Lomas de Zamora,Jue,08:00-13:00,20,presencial,,recepcion
+1476,"Bertolo, Camila — Oftalmologia",Camila,Oftalmología,Centro Oftalmologico Berazategui,Vie,09:00-12:00,10,presencial,,recepcion
+1399,"Bordon, Facundo — Oftalmologia",Facundo Exequiel,Oftalmología,Centro Oftalmologico Berazategui,Mar Mié,10:00-16:50,15,presencial,,recepcion
+1974,Cinthya Priscila Ocampo Espinosa — Oftalmología,Cinthya Priscila Ocampo,Oftalmología,Sede Lomas de Zamora,Sáb,08:00-14:00,10,presencial,,recepcion
+1389,"Diaz, Diego — Oftalmologia",Diego,Oftalmología,Centro Oftalmologico Berazategui,Lun,09:30-15:00,10,presencial,,recepcion
+1971,Facundo Exequiel Bordon — Oftalmología,Facundo Exequiel,Oftalmología,Centro oftalmológico Berazategui,Mar,10:00-16:45,15,presencial,,recepcion
+1968,Facundo Exequiel Bordon — Oftalmología,Facundo Exequiel,Oftalmología,Sede Lomas de Zamora,Lun,11:40-16:00,10,presencial,,recepcion
+1435,"Maciel, Judith — Oftalmologia",Judith,Oftalmología,Centro Oftalmologico Berazategui,Mar Mié,09:00-16:30,10,presencial,,recepcion
+1352,"Muller, Solange — Oftalmologia",Solange,Oftalmología,Centro Oftalmologico Berazategui,Sáb,09:00-14:00,10,presencial,,recepcion
+191,Oftalmología — Camila Bertolo,Camila,Oftalmología,Centro oftalmológico Berazategui,Vie,09:00-12:10,30,presencial,,online
+194,Oftalmología — Cintia Solange Pineda,Cintia Solange,Oftalmología,Centro oftalmológico Berazategui,Jue Vie,10:00-17:00,15,presencial,,online
+199,Oftalmología — Diego Diaz,Diego,Oftalmología,Centro oftalmológico Berazategui,Lun,09:30-15:00,10,presencial,,online
+197,Oftalmología — Juan Pablo Salinas,Juan Pablo,Oftalmología,Centro oftalmológico Berazategui,Mar Mié,12:00-15:50,10,presencial,,online
+192,Oftalmología — Judith Maciel,Judith,Oftalmología,Centro oftalmológico Berazategui,Mar Mié,09:00-16:30,10,presencial,,online
+1353,"Salinas, Juan — Oftalmologia",Juan Pablo,Oftalmología,Centro Oftalmologico Berazategui,Mar Mié,12:00-15:50,10,presencial,,recepcion
+1964,Solange Muller — Oftalmología,Solange,Oftalmología,Centro oftalmológico Berazategui,Sáb,09:00-14:00,10,presencial,,recepcion
+1369,"Zurita, Adriana — Oftalmologia",Adriana,Oftalmología,Centro Oftalmologico Berazategui,Jue,09:00-15:30,10,presencial,,recepcion
+1492,"Bertolo, Camila — Oftalmologia Lomas De Zamora",Camila,Oftalmología Lomas de Zamora,Sede Lomas de Zamora,Jue,09:00-12:00,10,presencial,,recepcion
+1481,"Bordon, Facundo — Oftalmologia Lomas De Zamora",Facundo Exequiel,Oftalmología Lomas de Zamora,Sede Lomas de Zamora,Lun,10:00-16:00,10,presencial,,recepcion
+1977,Jorge Alberto Salcedo Robles — Oftalmologia Lomas de Zamora,Jorge Alberto Salcedo,Oftalmología Lomas de Zamora,Sede Lomas de Zamora,Vie,08:30-16:30,10,presencial,,recepcion
+1486,"Llanos, Claudia — Oftalmologia Lomas De Zamora",Claudia,Oftalmología Lomas de Zamora,Sede Lomas de Zamora,Mar Sáb,09:00-17:30,10,presencial,,recepcion
+1473,"Montes Barros, — Pediatria Programada",Katherine,Pediatría programada,Central- Berazategui,Mié,08:30-15:00,15,presencial,,recepcion
+4516,PEDIATRIA PROGRAMADA,Rocio Soledad,Pediatría programada,Central- Berazategui,Mié,14:00-18:00,15,presencial,,callcenter,online,recepcion
+200,PEDIATRIA PROGRAMADA — Cesar Ullon,Cesar,Pediatría programada,Central- Berazategui,Mar Jue Vie,09:00-14:00,30,presencial,,online
+201,PEDIATRIA PROGRAMADA — Katherine Montes Barros,Katherine,Pediatría programada,Central- Berazategui,Mié,08:30-15:00,15,presencial,,online
+209,Presurometria 24 hs — Calle 15 N° 4676 Presurometria- Mapa,Calle 15 N° 4676,Presurometría 24 hs,Cardiologia- Berazategui,Dom Lun Mar Mié Jue Vie Sáb,10:30-16:35,10,presencial,,online
+204,Presurometria 24 hs — Mapa Lomas De Zamora Presurometria,Mapa Lomas De Zamora,Presurometría 24 hs,Sede Lomas de Zamora,Lun Mar Mié Jue Vie,12:00-13:10,10,presencial,,online
+1402,"Presurometria- Mapa, — Presurometria 24 Hs",Calle 15 N° 4676,Presurometría 24 hs,Cardiologia- Berazategui,Dom Lun Mar Mié Jue Vie Sáb,15:00-16:30,5,presencial,,recepcion
+1341,"Presurometria, Mapa — Presurometria 24 Hs",Mapa Lomas De Zamora,Presurometría 24 hs,Sede Lomas de Zamora,Lun Mar Mié Jue Vie,12:00-13:10,10,presencial,,recepcion
+1280,"Radiologia, Radiologia — Rayos",Radiologia,Rayos,Central- Berazategui,Dom Lun Mar Mié Jue Vie Sáb,10:00-20:00,6,presencial,,recepcion
+1273,Columna Vertebral — Resonancia Magnetica,Resonancia,Resonancia magnética,Central- Berazategui,Dom Lun Mar Mié Jue Vie Sáb,08:00-20:00,75,presencial,,recepcion
+1277,Resonancia Magnetica de Articulaciones ,Resonancia,Resonancia magnética,Central- Berazategui,Lun Mar Mié Jue Vie,09:00-16:00,20,presencial,Sí,recepcion
+4285,Resonancia Magnetica GE,,Resonancia magnética,Central- Berazategui,Lun Mar Mié Jue Vie Sáb,08:00-18:00,15,presencial,Sí,recepcion
+1442,"Donofrio Pasaporte, — Reumatologia",Maria Alejandra,Reumatología,Central- Berazategui,Sáb,14:00-17:00,5,presencial,,recepcion
+1441,"Donofrio Pasaporte, — Reumatologia",Maria Alejandra,Reumatología,Central- Berazategui,Sáb,11:00-14:00,5,presencial,,recepcion
+1440,"Donofrio Pasaporte, — Reumatologia",Maria Alejandra,Reumatología,Central- Berazategui,Mié,17:30-19:30,10,presencial,,recepcion
+1288,"Gardenez, Oscar — Reumatologia",Oscar,Reumatología,Central- Berazategui,Vie Sáb,10:00-14:00,10,presencial,,recepcion
+218,Reumatologia — Maria Alejandra Donofrio Pasaporte,Maria Alejandra,Reumatología,Central- Berazategui,Mié Vie Sáb,11:00-19:44,10,presencial,,online
+220,Reumatologia — Oscar Gardeñez,Oscar,Reumatología,Central- Berazategui,Vie Sáb,09:00-14:00,10,presencial,,online
+217,Reumatologia — Seminario Torres,Seminario,Reumatología,Central- Berazategui,Lun Jue,15:00-18:00,15,presencial,,online
+1281,"Torres, Seminario — Reumatologia",Seminario,Reumatología,Central- Berazategui,Lun Jue,15:00-18:00,15,presencial,,recepcion
+1464,"Brito Santiago, — Traumatologia",Omar Alonso,Traumatología,Central- Berazategui,Lun,15:00-18:00,10,presencial,,recepcion
+1465,"Cabezas Vega, — Traumatologia",Alex Javier,Traumatología,Central- Berazategui,Dom,12:30-17:00,15,presencial,,recepcion
+1450,"Coello Gomez, — Traumatologia",Napoleon Alberto,Traumatología,Central- Berazategui,Mar Mié,15:00-18:00,5,presencial,,callcenter,online,recepcion
+1448,"Colombo, Nicolas — Traumatologia",Nicolas,Traumatología,Central- Berazategui,Lun,08:00-10:00,7,presencial,,recepcion
+1405,"Freddy, Romero — Traumatologia",Romero,Traumatología,Central- Berazategui,Sáb,09:00-13:00,10,presencial,,recepcion
+1970,Jhonny Palma — Traumatología,Jhonny,Traumatología,Sede Lomas de Zamora,Jue,09:00-11:00,60,presencial,,recepcion
+1305,"Lasko, Alejandro — Traumatologia",Alejandro Javier,Traumatología,Central- Berazategui,Lun,15:00-19:00,10,presencial,,recepcion
+1311,"Martin, Padilla — Traumatologia",Padilla,Traumatología,Central- Berazategui,Sáb,09:00-13:00,12,presencial,,recepcion
+1256,"Palma, Jhonny — Traumatologia",Jhonny,Traumatología,Central- Berazategui,Mié,09:30-14:00,10,presencial,,recepcion
+1285,"Rocha, Leon — Traumatologia",Leon,Traumatología,Central- Berazategui,Sáb,13:00-17:00,7,presencial,,recepcion
+242,Traumatología — Alejandro Javier Lasko,Alejandro Javier,Traumatología,Central- Berazategui,Lun,15:00-19:00,10,presencial,,online
+230,Traumatología — Fernando Daniel Romero,Fernando Daniel,Traumatología,Central- Berazategui,Jue Vie,08:00-16:00,10,presencial,,online
+235,Traumatología — Geiner Manuel Gomez Gutierrez,Geiner Manuel,Traumatología,Central- Berazategui,Vie,09:00-18:00,30,presencial,,online
+221,Traumatología — Guillermo Villagran,Guillermo,Traumatología,Central- Berazategui,Lun Mié Jue,13:00-18:39,7,presencial,,online
+231,Traumatología — Hector Jaime Vega Araujo,Hector Jaime,Traumatología,Central- Berazategui,Jue,10:30-15:08,10,presencial,,online
+229,Traumatología — Helen Ureña Melgarejo,Helen,Traumatología,Central- Berazategui,Mié,15:00-19:05,10,presencial,,online
+234,Traumatología — Ignacio Violini,Ignacio,Traumatología,Central- Berazategui,Vie,09:00-14:00,10,presencial,,online
+224,Traumatología — Jhonny Palma,Jhonny,Traumatología,Central- Berazategui,Mié,09:30-14:00,10,presencial,,online
+238,Traumatología — Leon Rocha,Leon,Traumatología,Central- Berazategui,Vie Sáb,13:00-17:08,10,presencial,,online
+225,Traumatología — Leonardo Soto,Leonardo,Traumatología,Central- Berazategui,Mié,11:00-15:08,7,presencial,,online
+232,Traumatología — Milton Remberto Veizaga Goytia,Milton Remberto,Traumatología,Central- Berazategui,Jue,14:00-18:00,10,presencial,,online
+241,Traumatología — Natali Gardenia Ortega Romero,Natali Gardenia,Traumatología,Central- Berazategui,Mié Vie Sáb,10:00-18:00,10,presencial,,callcenter,online,recepcion
+239,Traumatología — NICOLAS COLOMBO,Nicolas,Traumatología,Central- Berazategui,Lun,08:00-10:09,10,presencial,,online
+222,Traumatología — Omar Alonso Brito Santiago,Omar Alonso,Traumatología,Central- Berazategui,Lun,15:00-18:00,10,presencial,,online
+236,Traumatología — Padilla Martin,Padilla,Traumatología,Central- Berazategui,Sáb,09:00-13:00,10,presencial,,online
+237,Traumatología — Romero Freddy,Romero,Traumatología,Central- Berazategui,Sáb,09:00-13:00,10,presencial,,online
+1456,"Urena Melgarejo, — Traumatologia",Helen,Traumatología,Central- Berazategui,Mié,15:00-19:00,7,presencial,,recepcion
+1472,"Vega Araujo, — Traumatologia",Hector Jaime,Traumatología,Central- Berazategui,Jue,11:00-15:00,7,presencial,,recepcion
+1463,"Veizaga Goytia, — Traumatologia",Milton Remberto,Traumatología,Central- Berazategui,Jue,14:00-18:00,10,presencial,,recepcion
+1255,"Violini, Ignacio — Traumatologia",Ignacio,Traumatología,Central- Berazategui,Vie,09:00-14:00,10,presencial,,recepcion
+1506,"Colombo, Nicolas — Traumatologia Infantil",Nicolas,Traumatología infantil,Central- Berazategui,Lun,10:00-12:02,10,presencial,,recepcion
+1483,"Ledezma Rios, — Traumatologia Lomas De Zamora",Luis Rolando,Traumatología Lomas de Zamora,Sede Lomas de Zamora,Lun Vie,10:00-13:00,10,presencial,,recepcion
+1507,"Leniz Valencia, — Traumatologia Lomas De Zamora",Carlos,Traumatología Lomas de Zamora,Sede Lomas de Zamora,Mar,15:00-18:00,10,presencial,,recepcion
+1484,"Martin, Padilla — Traumatologia Lomas De Zamora",Padilla,Traumatología Lomas de Zamora,Sede Lomas de Zamora,Vie,15:00-17:30,10,presencial,,recepcion
+1480,"Palma, Jhonny — Traumatologia Lomas De Zamora",Jhonny,Traumatología Lomas de Zamora,Sede Lomas de Zamora,Jue,08:30-11:30,10,presencial,,recepcion
+1392,"Piropo, Rubem — Urologia Inicial",Rubem,Urología inicial,Central- Berazategui,Mié,08:21-13:00,10,presencial,,recepcion
+1497,"Altamirano Abraham, — Urologia Lomas De Zamora",Mariel Alejandra,Urología Lomas de Zamora,Sede Lomas de Zamora,Lun Jue Sáb,10:00-17:00,10,presencial,,recepcion
+1292,"Guinoa, Ignacio — Videollamada- Clinica Medica",Ignacio Saez De,Videollamada clínica médica,Central- Berazategui,Lun Mar Mié Jue Vie Sáb,00:00-23:59,10,presencial,Sí,recepcion
+1294,"Coronel, Mariano — Videollamada Endocrinologia",Mariano,Videollamada endocrinología,Central- Berazategui,Vie,13:00-14:06,10,presencial,,recepcion

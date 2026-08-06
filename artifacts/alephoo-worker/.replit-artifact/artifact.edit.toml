@@ -1,0 +1,9 @@
+[artifact]
+id = "artifacts/alephoo-worker"
+kind = "api"
+title = "Alephoo Worker (ECS Job)"
+
+[[services]]
+localPort = 3099
+name = "Alephoo Worker Health"
+paths = ["/alephoo-worker"]

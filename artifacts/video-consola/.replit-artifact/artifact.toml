@@ -1,0 +1,31 @@
+kind = "video"
+previewPath = "/video-consola/"
+title = "Video: Consola de Recepción"
+version = "1.0.0"
+id = "artifacts/video-consola"
+router = "path"
+
+[[integratedSkills]]
+name = "video-js"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/video-consola/" ]
+localPort = 23644
+
+[services.development]
+run = "pnpm --filter @workspace/video-consola run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/video-consola", "run", "build" ]
+publicDir = "artifacts/video-consola/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23644"
+BASE_PATH = "/video-consola/"

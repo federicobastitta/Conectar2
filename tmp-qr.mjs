@@ -1,0 +1,24 @@
+const base = "http://localhost:80/api";
+const login = async (e,p)=>{const r=await fetch(base+"/auth/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:e,password:p})});return (await r.json()).token;};
+const admin = await login("desarrollador@diagnosticar.ar","diagnosticar");
+const HA={Authorization:"Bearer "+admin,"Content-Type":"application/json"};
+const m1 = await login("medico@diagnosticar.ar","medico123");
+const HM={Authorization:"Bearer "+m1,"Content-Type":"application/json"};
+const pacs = await (await fetch(base+"/pacientes?limit=1",{headers:HA})).json();
+const ro = await fetch(base+"/consultorio/study-orders",{method:"POST",headers:HM,body:JSON.stringify({patientId:pacs.data[0].id,studyType:"laboratorio",studyName:"Hemograma completo"})});
+const oj = await ro.json();
+console.log("orden:", ro.status, oj.id);
+const g = await fetch(base+"/consultorio/pdf/generate",{method:"POST",headers:HM,body:JSON.stringify({sourceType:"orden_estudio",sourceId:oj.id})});
+const gj = await g.json();
+const p = await fetch(base+`/consultorio/pdf/${gj.id}`,{headers:HM});
+(await import("node:fs")).writeFileSync("/tmp/orden-qr.pdf", Buffer.from(await p.arrayBuffer()));
+// código generado perezosamente: leo la orden para conocerlo... no expuesto; pruebo verificar por número OE
+const f = new Date(oj.createdAt);
+const ymd = `${f.getUTCFullYear()}${String(f.getUTCMonth()+1).padStart(2,"0")}${String(f.getUTCDate()).padStart(2,"0")}`;
+const numero = `OE-${ymd}-${String(oj.id).padStart(8,"0")}`;
+const v = await fetch(`${base}/consultorio/ordenes/verificar/${numero}`);
+console.log("verificar por numero:", v.status, JSON.stringify(await v.json()));
+const v404 = await fetch(`${base}/consultorio/ordenes/verificar/OE-19990101-00000001`);
+console.log("verificar inexistente:", v404.status);
+const pg = await fetch("http://localhost:80/verificar-orden/abc");
+console.log("pagina publica:", pg.status);

@@ -1,0 +1,230 @@
+uploads = []
+
+[[generated]]
+id = "wjADq9Wq3Jhys0jBm_lJI"
+uri = "file://artifacts/mi-diagnosticar/src/assets/asistente-mascota.png"
+type = "image"
+title = "puppet mascot drums"
+
+[[generated]]
+id = "jDx4MDgqpB2XAo2B1y_rL"
+uri = "file://attached_assets/generated_images/icono_pwa_estetoscopio.png"
+type = "image"
+title = "generated_image"
+
+[[outputs]]
+id = "a7-iJYZ6Bs9lryxEilcGV"
+uri = "file://docs/auditoria-conectar.md"
+type = "text"
+title = "Auditoría técnica y arquitectónica de Conectar"
+
+[[outputs]]
+id = "Q3k6Z-gNX2UsGoS-85FJG"
+uri = "file://attached_assets/autopilot/especialidades.csv"
+type = "table"
+title = "Especialidades de Diagnosticar (25)"
+
+[[outputs]]
+id = "ldRR-UNGC93WVRZaHshp3"
+uri = "file://attached_assets/autopilot/profesionales.csv"
+type = "table"
+title = "Profesionales de Diagnosticar (209)"
+
+[[outputs]]
+id = "LjJ2JLfCWitH0FJuKXg_x"
+uri = "file://exports/catalogo_practicas.csv"
+type = "table"
+title = "Catálogo de prácticas (código IOMA + descripción)"
+
+[[outputs]]
+id = "uMfjlyMuXvdyLc4u4kSBq"
+uri = "file://exports/catalogo_profesionales.csv"
+type = "table"
+title = "Catálogo de profesionales (ID, nombre, matrícula, especialidad)"
+
+[[outputs]]
+id = "xOoLFOemIen6b_tkfFSGS"
+uri = "file://artifacts/video-consola/public/audio/bg_music.mp3"
+type = "audio"
+title = "background music"
+
+[[outputs]]
+id = "vnZQ_RDC9x6RCKZCzc-93"
+uri = "file://.agents/outputs/manual-recepcion-paciente.pdf"
+type = "pdf"
+title = "Manual: Cómo recepcionar un paciente"
+
+[[outputs]]
+id = "Ow0kRyCnQRDdJ7XQieEIW"
+uri = "file://docs/pacs-workspace-plan.md"
+type = "text"
+title = "Plan v2: Módulo Estudios + Workspace PACS (alineado con spec del PACS)"
+
+[[outputs]]
+id = "f_xwhGIwvhTmE1xf0NrVZ"
+uri = "file://docs/pacs-workspace-openapi.yaml"
+type = "unspecified"
+title = "Contrato OpenAPI v2 (endpoints /api/v1/integration/*)"
+
+[[outputs]]
+id = "FRazQZeeAMwzKk52NDvec"
+uri = "file://docs/pacs-compatibilidad-v0.2.md"
+type = "text"
+title = "Informe de compatibilidad Conectar ↔ DiagnosticPACS (v0.2)"
+
+[[outputs]]
+id = "dsAINQ0JubabxGjkd5hp7"
+uri = "file://exports/respuesta-conectar-v0.2.zip"
+type = "unspecified"
+title = "respuesta-conectar-v0.2.zip — Informe de compatibilidad para DiagnosticPACS"
+
+[[outputs]]
+id = "TcsBaVsVfoeUY0OKR6id2"
+uri = "file://docs/pacs-aprobacion-v0.3.md"
+type = "text"
+title = "Decisión de Conectar sobre v0.3 — CAMBIOS MENORES NECESARIOS"
+
+[[outputs]]
+id = "z0rkEN8x5QPD88C2cMg_q"
+uri = "file://exports/aprobacion-conectar-v0.3.zip"
+type = "unspecified"
+title = "aprobacion-conectar-v0.3.zip — Decisión de Conectar para DiagnosticPACS"
+
+[[outputs]]
+id = "atN1M_3KTtspJLXirqjZh"
+uri = "file://exports/usuarios-medicos.xlsx"
+type = "table"
+title = "Usuarios y contraseñas de médicos"
+
+[[outputs]]
+id = "_mSCSeLFAzXSa05cs30jY"
+uri = "file://exports/usuarios-recepcionistas.xlsx"
+type = "table"
+title = "Usuarios y contraseñas de recepcionistas"
+
+[[outputs]]
+id = "CKrDL7YazMUMVCgh01tE5"
+uri = "file://attached_assets/verificacion_firma/certificado_prueba_fernandez.pdf"
+type = "pdf"
+title = "Certificado médico — firma aún más grande"
+
+[[outputs]]
+id = "38Aa_lYPsFMElWwS2H_fc"
+uri = "file://attached_assets/verificacion_firma/planilla_alta_complejidad_prueba_fernandez.pdf"
+type = "pdf"
+title = "Planilla IOMA alta complejidad firmada — Dra. Fernández"
+
+[[outputs]]
+id = "skKhSsGOCi7AWBdtxZgUo"
+uri = "file://attached_assets/verificacion_firma/orden_baja_complejidad_prueba_fernandez.pdf"
+type = "pdf"
+title = "Orden de baja complejidad — firma aún más grande"
+
+[[outputs]]
+id = "9QaVJe4Ub14Myz1VILwDm"
+uri = "file://attached_assets/orden_alta_complejidad_ejemplo.pdf"
+type = "pdf"
+title = "Planilla IOMA — escritura con imperfecciones"
+
+[[outputs]]
+id = "5AxA5J9UvmVCddq1IoXvH"
+uri = "file://attached_assets/certificado_ejemplo_manuscrito.pdf"
+type = "pdf"
+title = "Certificado — escritura con imperfecciones"
+
+[[outputs]]
+id = "3aDxgMgUC2StRwEpVAVIc"
+uri = "file://attached_assets/generated/certificado_letra_manuscrita.png"
+type = "image"
+title = "Certificado de prueba — letra manuscrita del médico"
+
+[[outputs]]
+id = "MrW9HoYIkxOhqtRcbbi59"
+uri = "file://attached_assets/generated/certificado_datos_manuscritos.png"
+type = "image"
+title = "Certificado — datos del paciente en manuscrita"
+
+[[outputs]]
+id = "jO_KS2bBLzL9rDtF2SDOp"
+uri = "file://attached_assets/generated/muestra_5_caligrafias.png"
+type = "image"
+title = "Las 5 caligrafías manuscritas (una fija por médico)"
+
+[[outputs]]
+id = "jSgPyQf2pWQNVP5P6_MvB"
+uri = "file://attached_assets/generated/muestra_6_letras_completa.png"
+type = "image"
+title = "Las 6 letras manuscritas — frases completas"
+
+[[outputs]]
+id = "xiQWF2NJYGEKpemIkg9S0"
+uri = "file://attached_assets/generated/muestra_6_letras_motor_real.png"
+type = "image"
+title = "Las 6 letras escritas por el motor real (con imperfecciones)"
+
+[[outputs]]
+id = "HKG6zt8xE1j78Q49rli89"
+uri = "file://attached_assets/generated/muestra_6_letras_deterioradas.png"
+type = "image"
+title = "Las 6 letras manuscritas — versión actual"
+
+[[outputs]]
+id = "7Jy3ToyyniiXVVa3T2ji9"
+uri = "file://attached_assets/generated/muestra_6_letras_moderada.png"
+type = "image"
+title = "Las 6 letras — desalineación moderada"
+
+[[outputs]]
+id = "I9A2dbRDhwZEUF1a3vgOe"
+uri = "file://attached_assets/generated/muestra_6_letras_suave.png"
+type = "image"
+title = "Las 6 letras — deterioro suavizado"
+
+[[outputs]]
+id = "1LnP5yqvPsj0267lSrxsW"
+uri = "file://docs/app-paciente-autologin-contrato.md"
+type = "text"
+title = "Contrato de autologin para la app del paciente"
+description = "Instrucciones para pegarle al Agente del proyecto de la app Mi Diagnosticar: cómo loguear al paciente automáticamente con el link /ingreso/<código>."
+
+[[outputs]]
+id = "1I6JnJj0jtARORua_mXSy"
+uri = "file://attached_assets/generadas/orden-ejemplo-escaneada.pdf"
+type = "pdf"
+title = "Firma completa, sin línea ni leyenda"
+description = "Se borra la línea y el texto 'Sello y Firma Profesional' que venían dentro de la imagen escaneada, conservando el trazo completo de la firma que los cruza."
+
+[[outputs]]
+id = "0h-DnDpPaFDAwOHN5oJk2"
+uri = "file://attached_assets/generadas/backup-orden-baja-complejidad-piropo.pdf"
+type = "pdf"
+title = "Backup: orden de baja complejidad (Dr. Piropo)"
+description = "Copia de respaldo de la orden de baja complejidad con la firma limpia del Dr. Piropo, guardada como referencia del formato aprobado."
+
+[[outputs]]
+id = "cRmrbWtEbx29k4dSThlaw"
+uri = "file://docs/portal-paciente-guardia-virtual-mensajes.md"
+type = "text"
+title = "Guía para Mi Diagnosticar (actualizada)"
+description = "Ahora incluye el pedido de la sala de espera virtual: pantalla clara y didáctica con espacio para publicidad de la clínica."
+
+[[outputs]]
+id = "prRRq3vV0gW9u9G24UvA8"
+uri = "file://docs/api-disponibilidad-turnos-contrato.md"
+type = "text"
+title = "Contrato API de disponibilidad de turnos"
+description = "Documento para el equipo de la app del paciente: endpoint nuevo por rango (fechaDesde/fechaHasta, agrupado por fecha) y el endpoint por fecha existente."
+
+[[outputs]]
+id = "rYhYzslNeQFKtopbK8uEi"
+uri = "file://docs/guia-chatbot-para-equipo-portal.md"
+type = "text"
+title = "Guía para entrenar el chatbot del portal"
+description = "Versión actualizada: incluye la tabla de la API pública de turneras y la nueva consulta de fila post check-in."
+
+[[outputs]]
+id = "uUXFRW18e5_u_wSzBO0xD"
+uri = "file://docs/listado-agendas-produccion.csv"
+type = "table"
+title = "Listado completo de agendas (producción)"
+description = "Las 294 agendas activas de la app publicada: profesional, especialidad, sede, días, horario, duración y modalidad. Se abre con Excel."
