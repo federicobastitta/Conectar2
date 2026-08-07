@@ -137,6 +137,7 @@ function esTurnoValidado(t: { tokenStatus?: string | null; nroBono?: string | nu
 
 export default function AgendaPorMedico() {
   const [, navigate] = useLocation();
+  const turneraDiaRef = useRef<HTMLDivElement>(null);
   const [fecha, setFecha] = useState<string>(hoyArgentina());
   // La sede elegida queda guardada como preferencia del equipo de recepción.
   const [sedeId, setSedeIdEstado] = useState<string>(
@@ -1044,7 +1045,11 @@ export default function AgendaPorMedico() {
                 setEspecialidadId(h.especialidadId != null ? String(h.especialidadId) : "all");
                 setPreseleccion({ turneraId: String(h.turneraId), hora: h.hora });
                 setTurneraId(String(h.turneraId));
-                toast({ title: "Turno preseleccionado", description: `${h.agenda} · ${h.fecha} ${h.hora} hs. Elegí el paciente y registrá el turno.` });
+                setEstadoFiltro("todos");
+                window.setTimeout(() => {
+                  turneraDiaRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 150);
+                toast({ title: "Turno preseleccionado", description: `${h.agenda} · ${h.fecha} ${h.hora} hs. La turnera de ese día quedó abierta abajo.` });
               }}
             />
           </div>
@@ -1360,7 +1365,7 @@ export default function AgendaPorMedico() {
       </div>
 
       {/* Tabla de turnos */}
-      <div className="flex-1">
+      <div ref={turneraDiaRef} className="flex-1 scroll-mt-20" data-testid="turnera-dia-seleccionada">
         {isLoading ? (
           <div className="p-4 space-y-2">
             {[...Array(8)].map((_, i) => <Skeleton key={i} className="h-12 w-full" />)}
