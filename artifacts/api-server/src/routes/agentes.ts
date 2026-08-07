@@ -541,7 +541,7 @@ const TOOLS_RECEPCION = [
       parameters: {
         type: "object",
         properties: {
-          turneraIds: { type: "array", items: { type: "integer" }, description: "IDs de agendas (máx 5)" },
+          turneraIds: { type: "array", items: { type: "integer" }, description: "IDs de todas las agendas coincidentes (máx 50)" },
           diasSemana: { type: "array", items: { type: "integer" }, description: "Días de semana permitidos (0=domingo … 6=sábado). Ej jueves = [4]" },
           franja: { type: "string", enum: ["manana", "tarde", "cualquiera"], description: "mañana = antes de las 13, tarde = desde las 13" },
           desde: { type: "string", description: "Fecha mínima YYYY-MM-DD (opcional, default hoy)" },
@@ -691,13 +691,16 @@ async function ejecutarToolRecepcion(
           return tokens.length > 0 ? tokens.some((t) => pb.includes(t)) : pb.includes(texto);
         }).map((p) => ({ codigo: p.codigo, descripcion: p.descripcion }));
         return { ...a, practicasCoincidentes };
-      }).filter((a): a is NonNullable<typeof a> => a !== null).slice(0, 10);
+      }).filter((a): a is NonNullable<typeof a> => a !== null).slice(0, 50);
       return JSON.stringify({ agendas: coincide, nota: "diasAtencion: 0=domingo…6=sábado. practicasCoincidentes: prácticas de esa agenda que matchean la búsqueda (por nombre o código)." });
     }
 
     if (nombre === "proximos_huecos") {
-      const ids = (Array.isArray(args.turneraIds) ? args.turneraIds : [])
-        .map(Number).filter((n) => Number.isInteger(n) && n > 0).slice(0, 5);
+      // La búsqueda debe competir contra todas las agendas coincidentes de la
+      // clínica. El tope protege la consulta ante argumentos anómalos, pero no
+      // recorta el caso operativo habitual a los primeros cinco profesionales.
+      const ids = [...new Set((Array.isArray(args.turneraIds) ? args.turneraIds : [])
+        .map(Number).filter((n) => Number.isInteger(n) && n > 0))].slice(0, 50);
       if (ids.length === 0) return JSON.stringify({ error: "Falta turneraIds" });
       const diasSemana = Array.isArray(args.diasSemana) ? args.diasSemana.map(Number) : null;
       const franja = args.franja === "manana" || args.franja === "tarde" ? args.franja : null;
@@ -1197,13 +1200,9 @@ router.post("/agentes/sesiones/:id/mensajes", async (req: Request, res: Response
           try {
             const parsed = JSON.parse(resultado) as { huecos?: { fecha: string; hora: string }[] };
             if (Array.isArray(parsed.huecos) && parsed.huecos.length > 0) {
-              // Botones: 3 opciones. Si hay varios días, el hueco más temprano
-              // de cada día; si todos son del mismo día, los primeros 3.
-              const porFecha = new Map<string, typeof parsed.huecos[number]>();
-              for (const h of parsed.huecos) if (!porFecha.has(h.fecha)) porFecha.set(h.fecha, h);
-              const botones = porFecha.size > 1
-                ? [...porFecha.values()].slice(0, 3)
-                : parsed.huecos.slice(0, 3);
+              // El motor ya devuelve los huecos ordenados por fecha y hora:
+              // mostramos los tres primeros reales, sin forzar días distintos.
+              const botones = parsed.huecos.slice(0, 3);
               res.write(`data: ${JSON.stringify({ huecos: botones })}\n\n`);
             }
           } catch { /* resultado no parseable: sin botones */ }
