@@ -1197,13 +1197,13 @@ router.post("/agentes/sesiones/:id/mensajes", async (req: Request, res: Response
           try {
             const parsed = JSON.parse(resultado) as { huecos?: { fecha: string; hora: string }[] };
             if (Array.isArray(parsed.huecos) && parsed.huecos.length > 0) {
-              // Botones: 4 opciones. Si hay varios días, el hueco más temprano
-              // de cada día; si todos son del mismo día, los primeros 4.
+              // Botones: 3 opciones. Si hay varios días, el hueco más temprano
+              // de cada día; si todos son del mismo día, los primeros 3.
               const porFecha = new Map<string, typeof parsed.huecos[number]>();
               for (const h of parsed.huecos) if (!porFecha.has(h.fecha)) porFecha.set(h.fecha, h);
               const botones = porFecha.size > 1
-                ? [...porFecha.values()].slice(0, 4)
-                : parsed.huecos.slice(0, 4);
+                ? [...porFecha.values()].slice(0, 3)
+                : parsed.huecos.slice(0, 3);
               res.write(`data: ${JSON.stringify({ huecos: botones })}\n\n`);
             }
           } catch { /* resultado no parseable: sin botones */ }
