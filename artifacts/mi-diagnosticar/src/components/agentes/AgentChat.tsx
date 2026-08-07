@@ -666,7 +666,10 @@ function MensajeItem({
                 className="w-full text-left rounded-md border bg-card hover:bg-accent px-2 py-1.5 text-xs transition-colors"
                 title="Cargar esta agenda, fecha y hora en el panel de la derecha"
               >
-                <span className="font-medium">{formatearFechaHueco(h.fecha)} · {h.hora} hs</span>
+                <span className="flex items-center justify-between gap-2">
+                  <span className="font-medium">{formatearFechaHueco(h.fecha)} · {h.hora} hs</span>
+                  <span className="font-semibold text-primary">Agendar →</span>
+                </span>
                 <span className="block text-muted-foreground truncate">{h.agenda}</span>
               </button>
             ))}
