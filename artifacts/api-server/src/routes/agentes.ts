@@ -740,7 +740,6 @@ async function ejecutarToolRecepcion(
       // los filtros de la agenda cuando el usuario clickea un hueco ofrecido.
       const huecos: { turneraId: number; agenda: string; fecha: string; hora: string; sedeId: number | null; especialidadId: number | null }[] = [];
       for (const fecha of fechas) {
-        if (huecos.length >= 12) break;
         const slotsDia = (await Promise.all(
           turneras.map((t) => calcularSlotsDisponibles(t, fecha, turnosPorClave.get(`${t.id}|${fecha}`) ?? [])),
         )).flat();
@@ -754,7 +753,7 @@ async function ejecutarToolRecepcion(
           .sort((a, b) => a.horaInicio.localeCompare(b.horaInicio));
         let delDia = 0;
         for (const s of libres) {
-          if (huecos.length >= 12 || delDia >= 3) break;
+          if (delDia >= 3) break;
           const t = turneras.find((x) => x.id === s.turneraId);
           huecos.push({
             turneraId: s.turneraId, agenda: t?.nombre ?? "", fecha: s.fecha, hora: s.horaInicio,
@@ -763,7 +762,23 @@ async function ejecutarToolRecepcion(
           delDia++;
         }
       }
-      return JSON.stringify({ huecos });
+      // Ofrecer primero una alternativa por fecha. Los horarios adicionales
+      // del mismo día solo completan la terna cuando no existen tres fechas
+      // distintas con disponibilidad dentro de la ventana consultada.
+      const primeraOpcionPorFecha = new Map<string, typeof huecos[number]>();
+      for (const h of huecos) if (!primeraOpcionPorFecha.has(h.fecha)) primeraOpcionPorFecha.set(h.fecha, h);
+      const seleccionados = [...primeraOpcionPorFecha.values()].slice(0, 3);
+      if (seleccionados.length < 3) {
+        const clavesSeleccionadas = new Set(seleccionados.map((h) => `${h.turneraId}|${h.fecha}|${h.hora}`));
+        for (const h of huecos) {
+          const clave = `${h.turneraId}|${h.fecha}|${h.hora}`;
+          if (clavesSeleccionadas.has(clave)) continue;
+          seleccionados.push(h);
+          clavesSeleccionadas.add(clave);
+          if (seleccionados.length === 3) break;
+        }
+      }
+      return JSON.stringify({ huecos: seleccionados });
     }
 
     if (nombre === "crear_turno") {
